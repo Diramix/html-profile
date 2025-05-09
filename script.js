@@ -126,21 +126,20 @@ fetchReleaseData();
 let mediaElements = document.querySelectorAll('audio, video');
 
 mediaElements.forEach(media => {
-    let fadeInInterval;
-    let fadeOutInterval;
+    media.fadeInInterval = null;
+    media.fadeOutInterval = null;
 
     media.addEventListener('play', function () {
         mediaElements.forEach(el => {
             if (el !== media && !el.paused) {
-                let originalVolume = el.volume;
-                // Плавно убавляем громкость других элементов до 0
-                clearInterval(fadeInInterval); // Останавливаем возможное увеличение громкости
-                fadeOutInterval = setInterval(() => {
+                clearInterval(el.fadeInInterval);
+                clearInterval(el.fadeOutInterval);
+                el.fadeOutInterval = setInterval(() => {
                     if (el.volume > 0.05) {
                         el.volume -= 0.05;
                     } else {
                         el.volume = 0;
-                        clearInterval(fadeOutInterval);
+                        clearInterval(el.fadeOutInterval);
                     }
                 }, 50);
             }
@@ -150,13 +149,14 @@ mediaElements.forEach(media => {
     media.addEventListener('pause', function () {
         mediaElements.forEach(el => {
             if (el !== media && el.volume < 1) {
-                // Плавно увеличиваем громкость других элементов до 1
-                clearInterval(fadeOutInterval); // Останавливаем возможное уменьшение громкости
-                fadeInInterval = setInterval(() => {
+                clearInterval(el.fadeOutInterval);
+                clearInterval(el.fadeInInterval);
+                el.fadeInInterval = setInterval(() => {
                     if (el.volume < 1) {
                         el.volume += 0.05;
                     } else {
-                        clearInterval(fadeInInterval);
+                        el.volume = 1;
+                        clearInterval(el.fadeInInterval);
                     }
                 }, 50);
             }
@@ -166,13 +166,14 @@ mediaElements.forEach(media => {
     media.addEventListener('ended', function () {
         mediaElements.forEach(el => {
             if (el !== media && el.volume < 1) {
-                // Плавно увеличиваем громкость других элементов до 1
-                clearInterval(fadeOutInterval); // Останавливаем возможное уменьшение громкости
-                fadeInInterval = setInterval(() => {
+                clearInterval(el.fadeOutInterval);
+                clearInterval(el.fadeInInterval);
+                el.fadeInInterval = setInterval(() => {
                     if (el.volume < 1) {
                         el.volume += 0.05;
                     } else {
-                        clearInterval(fadeInInterval);
+                        el.volume = 1;
+                        clearInterval(el.fadeInInterval);
                     }
                 }, 50);
             }
