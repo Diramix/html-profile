@@ -347,12 +347,13 @@ iframe {
     margin: 10px 0 5px;
     font-size: 16px;
     text-align: center;
+    color: #fff;
 }
 
 .track-artist {
     margin: 0 0 10px;
     font-size: 14px;
-    color: #666;
+    color: #fff8;
     text-align: center;
 }
 
@@ -370,6 +371,7 @@ audio {
     max-width: 220px;
     border-radius: 12px;
     background: #F1F3F4;
-    box-shadow: 0 3px 10px #16181E;
+    box-shadow: 0 3px 10px #E9E7E1;
     padding: 6px;
+    filter: invert(100%);
 }
