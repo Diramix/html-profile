@@ -1,14 +1,4 @@
-:root {
-    --background-dark: #16181E;
-    --background-changelog: #1E2027;
-    --font-color: #F0F6FC;
-    --tooltip: #292C36;
-
-    --main-blur: 30px;
-    --main-brightness: 0.5;
-}
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) and (pointer: coarse) {
     .main_container {
         background-color: #0000;
         padding: 20px;
