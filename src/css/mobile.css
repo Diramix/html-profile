@@ -1,0 +1,107 @@
+:root {
+    --background-dark: #16181E;
+    --background-changelog: #1E2027;
+    --font-color: #F0F6FC;
+    --tooltip: #292C36;
+
+    --main-blur: 30px;
+    --main-brightness: 0.5;
+}
+
+@media (max-width: 768px) {
+    .main_container {
+        background-color: #0000;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+        overflow: hidden !important;
+        backdrop-filter: blur(var(--main-blur));
+    }
+
+    .dev_change {
+        flex-direction: column;
+    }
+
+    .main_title,
+    .links_main_title {
+        display: none;
+    }
+
+    .topbar_links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .topbar_links button {
+        width: 100%;
+    }
+
+    .track-card {
+        width: 100%;
+        height: 90px;
+        background-color: #2B353B;
+        border-radius: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 17px;
+        box-shadow: 0 3px 10px #000;
+        z-index: 10;
+    }
+
+    .track-cover {
+        height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px #16181E;
+    }
+
+    .track-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        flex: 1;
+        gap: 5px;
+    }
+
+    .track-title {
+        margin: 0;
+        font-size: 16px;
+        text-align: left !important;
+        color: #fff;
+        display: none;
+    }
+
+    .track-artist {
+        margin: 0;
+        font-size: 14px;
+        color: #fff8;
+        text-align: left !important;
+        display: none;
+    }
+
+    .changelog {
+        justify-content: center;
+        height: calc(100vh - 330px);
+    }
+
+    .dev_container {
+        position: absolute;
+        bottom: 45px;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        border: 0;
+        height: 10;
+    }
+}
