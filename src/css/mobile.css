@@ -1,4 +1,21 @@
 @media only screen and (max-width: 768px) and (pointer: coarse) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        overflow: hidden;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: var(--main-background);
+    }
+
+    .main_wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
     .main_container {
         background-color: #0000;
         padding: 20px;
@@ -82,14 +99,14 @@
 
     .changelog {
         justify-content: center;
-        height: calc(100vh - 330px);
+        height: calc(100vh - 290px);
     }
 
     .dev_container {
         position: absolute;
-        bottom: 45px;
+        bottom: 80px;
         z-index: 10;
-        left: 0;
+        left: 10px;
         width: 100%;
         border: 0;
         height: 10;
