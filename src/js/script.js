@@ -81,46 +81,46 @@ developers.forEach(fetchDeveloperData);
 fetchReleaseData();
 
 // Ненавижу Mobile
-(function () {
-    const userAgent = navigator.userAgent;
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-    let platform = 'платформа';
+// (function () {
+//     const userAgent = navigator.userAgent;
+//     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+//     let platform = 'платформа';
 
-    if (userAgent.match(/Android/i)) {
-        platform = 'Android';
-    } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
-        platform = 'iOS';
-    } else if (userAgent.match(/Windows Phone/i)) {
-        platform = 'Windows Phone';
-    } else if (userAgent.match(/BlackBerry/i)) {
-        platform = 'BlackBerry';
-    }
+//     if (userAgent.match(/Android/i)) {
+//         platform = 'Android';
+//     } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+//         platform = 'iOS';
+//     } else if (userAgent.match(/Windows Phone/i)) {
+//         platform = 'Windows Phone';
+//     } else if (userAgent.match(/BlackBerry/i)) {
+//         platform = 'BlackBerry';
+//     }
 
-    if (isMobile) {
-        const style = document.createElement('style');
-        style.innerHTML = "@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');";
-        document.head.appendChild(style);
+//     if (isMobile) {
+//         const style = document.createElement('style');
+//         style.innerHTML = "@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');";
+//         document.head.appendChild(style);
 
-        document.documentElement.innerHTML = '';
-        const block = document.createElement('div');
-        block.style.cssText = `
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: black;
-      color: red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 32px;
-      font-weight: bold;
-      z-index: 99999;
-      font-family: 'Noto Sans', sans-serif;
-    `;
-        block.textContent = `Ненавижу ${platform}`;
-        document.body.appendChild(block);
-    }
-})();
+//         document.documentElement.innerHTML = '';
+//         const block = document.createElement('div');
+//         block.style.cssText = `
+//       position: fixed;
+//       top: 0; left: 0;
+//       width: 100%; height: 100%;
+//       background: black;
+//       color: red;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       font-size: 32px;
+//       font-weight: bold;
+//       z-index: 99999;
+//       font-family: 'Noto Sans', sans-serif;
+//     `;
+//         block.textContent = `Ненавижу ${platform}`;
+//         document.body.appendChild(block);
+//     }
+// })();
 
 // Fade Volume
 let mediaElements = document.querySelectorAll('audio, video');
