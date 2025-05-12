@@ -328,7 +328,7 @@ iframe {
     height: 290px;
     border: 0 solid;
     border-radius: 10px;
-    background-color: #2B353B;
+    background-color: #65001A;
     padding: 10px;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -349,6 +349,9 @@ iframe {
     font-size: 16px;
     text-align: center;
     color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
 }
 
 .track-artist {
