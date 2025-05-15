@@ -180,3 +180,52 @@ mediaElements.forEach(media => {
         });
     });
 });
+
+// Title Animation
+let words = ["dir/a", "ban is so cute", "Miku!", "Pretty boy:3", "Furry💖", "Меняйте пол!", "Гойда!", "sudo", "pacman -Ass", "npm run zov", "goida run make", "help", "exit"];
+let currentText = words[0];
+let displayText = "";
+let textIndex = 0;
+let charIndex = 0;
+let typing = true;
+let cursorVisible = true;
+let pause = false;
+
+function updateTitle() {
+    if (!pause) {
+        if (typing) {
+            if (charIndex < currentText.length) {
+                displayText += currentText[charIndex];
+                charIndex++;
+            } else {
+                pause = true;
+                setTimeout(() => {
+                    typing = false;
+                    pause = false;
+                }, 2000);
+            }
+        } else {
+            if (charIndex > 0) {
+                displayText = displayText.slice(0, -1);
+                charIndex--;
+            } else {
+                pause = true;
+                textIndex = (textIndex + 1) % words.length;
+                currentText = words[textIndex];
+                setTimeout(() => {
+                    typing = true;
+                    pause = false;
+                }, 500);
+            }
+        }
+    }
+
+    document.title = displayText + (cursorVisible ? "_" : " ");
+    setTimeout(updateTitle, 300);
+}
+
+setInterval(() => {
+    cursorVisible = !cursorVisible;
+}, 500);
+
+updateTitle();
