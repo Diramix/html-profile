@@ -100,8 +100,6 @@ body {
 }
 
 .main_container {
-    /* background: var(--background-dark); */
-    /* background-color: var(--background-dark); */
     background: linear-gradient(0deg,
             #276788 0%,
             #B0E5F6 100%);
@@ -164,13 +162,7 @@ body {
     border-radius: 10px;
     margin-right: 20px;
     width: 200px;
-    /* border: 1px solid red; */
-    /* padding: 5px; */
 }
-
-/* .dev_container:hover {
-    background-color: #fff1;
-} */
 
 .tooltip {
     visibility: hidden;
@@ -267,12 +259,6 @@ body {
     filter: brightness(1.1);
 }
 
-[id="ab_latest"] {
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness));
-    background-color: #011627;
-    box-shadow: 0 1px 4px #000;
-}
-
 .description p {
     margin-bottom: 15px;
 }
@@ -288,8 +274,7 @@ body {
     display: block;
 }
 
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .main_container {
         padding: 20px;
     }
@@ -305,7 +290,7 @@ body {
     .description {
         font-size: 13px;
     }
-}
+} */
 
 /* Scroll */
 .changelog::-webkit-scrollbar {
@@ -347,7 +332,7 @@ iframe {
 .track-cover {
     height: 150px;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 3px 10px #16181E;
 }
 
@@ -366,10 +351,6 @@ iframe {
     font-size: 14px;
     color: #fff8;
     text-align: center;
-}
-
-.track-audio {
-    width: 100%;
 }
 
 audio::-webkit-media-controls-current-time-display,
@@ -392,8 +373,4 @@ audio {
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
     content: url("https://cdn.discordapp.com/banners/710580442180485120/f4fb3fa6df495e1bf536e5d0ea89ed20.webp?size=1024&format=webp&width=1024&height=0");
     border-radius: 5px;
-}
-
-.bottom_links {
-    display: none;
 }
