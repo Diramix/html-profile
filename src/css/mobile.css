@@ -13,12 +13,12 @@
     .main_wrapper {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: calc(100vh - 70px);
     }
 
     .main_container {
         background-color: #0000;
-        padding: 20px;
+        padding: 10px;
         height: 100%;
         width: 100%;
         text-align: center;
@@ -99,10 +99,10 @@
 
     .changelog {
         justify-content: center;
-        height: calc(100vh - 290px);
+        height: calc(100vh - 333px);
     }
 
-    .dev_container {
+    /* .dev_container {
         position: absolute;
         bottom: 80px;
         z-index: 10;
@@ -110,5 +110,5 @@
         width: 100%;
         border: 0;
         height: 10;
-    }
+    } */
 }

@@ -3,7 +3,7 @@
 :root {
     --background-dark: #0D0D0D;
     --background-changelog: #1E2027;
-    --font-color: #F0F6FC;
+    --font-color: #2B333D;
     --tooltip: #292C36;
 
     --main-blur: 30px;
@@ -111,13 +111,22 @@ body {
 
 .main_container {
     /* background: var(--background-dark); */
-    background-color: var(--background-dark);
+    /* background-color: var(--background-dark); */
+    background: linear-gradient(0deg,
+            #276788 0%,
+            #B0E5F6 100%);
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
-    padding: 20px;
+    padding: 5px;
     height: 500px;
     width: 750px;
     text-align: center;
+}
+
+.background_wrapper {
+    background-color: #fff8;
+    border-radius: 13px;
+    padding: 15px;
 }
 
 .main_title {
@@ -146,6 +155,7 @@ body {
 .dev_change {
     display: flex;
     flex-direction: row;
+    gap: 15px;
 }
 
 .developers {
@@ -198,7 +208,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* Выравнивание текста по левому краю */
 }
 
 .avatar {
@@ -206,6 +215,14 @@ body {
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.avatar-frame {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 60px;
+    pointer-events: none;
 }
 
 .nickname {
@@ -216,17 +233,16 @@ body {
     display: block;
     font-weight: bold;
     font-size: 16px;
-    color: red !important;
 }
 
 .nickname>a {
-    color: #fff;
+    color: var(--font-color);
     text-decoration: none;
 }
 
 .dev_description {
     font-size: 14px;
-    color: #666;
+    color: var(--font-color);
     margin-top: 5px;
 }
 
@@ -238,10 +254,11 @@ body {
     border-radius: 8px;
     font-size: 14px;
     line-height: 2.2;
-    padding: 10px 30px 20px 30px;
+    padding: 15px;
     height: 398px;
-    width: 100%;
+    width: auto;
     overflow-y: auto;
+    background-color: #fff5;
 }
 
 .changelog button {
@@ -302,12 +319,12 @@ body {
 
 /* Scroll */
 .changelog::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 .changelog::-webkit-scrollbar-thumb {
-    background-color: #fff3;
-    border-radius: 8px;
+    background-color: #0003;
+    border-radius: 5px;
 
 }
 
@@ -375,7 +392,13 @@ audio {
     max-width: 220px;
     border-radius: 12px;
     background: #F1F3F4;
-    box-shadow: 0 3px 10px #E9E7E1;
+    /* box-shadow: 0 3px 10px #E9E7E1; */
+    box-shadow: 0 3px 10px #16181E;
     padding: 6px;
-    filter: invert(100%);
+    /* filter: invert(100%); */
+}
+
+/* Замена баннера */
+[src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
+    content: url("https://cdn.discordapp.com/banners/710580442180485120/f4fb3fa6df495e1bf536e5d0ea89ed20.webp?size=1024&format=webp&width=1024&height=0");
 }
