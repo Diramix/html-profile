@@ -1,0 +1,9 @@
+:root {
+    --background-dark: #0D0D0D;
+    --background-changelog: #1E2027;
+    --font-color: #2B333D;
+    --tooltip: #292C36;
+
+    --main-blur: 30px;
+    --main-brightness: 0.5;
+}
