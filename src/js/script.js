@@ -229,3 +229,37 @@ setInterval(() => {
 }, 500);
 
 updateTitle();
+
+// Fading main_container
+let mainContainer = document.querySelector('.main_container');
+let timeoutId;
+let isHidden = false;
+
+function hideContainer() {
+    mainContainer.style.transition = 'opacity 5s';
+    mainContainer.style.opacity = '0';
+    isHidden = true;
+}
+
+function showContainer() {
+    if (isHidden) {
+        mainContainer.style.transition = 'opacity 0.3s';
+        mainContainer.style.opacity = '1';
+        isHidden = false;
+    }
+}
+
+function resetTimer() {
+    showContainer();
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(hideContainer, 10000);
+}
+
+document.addEventListener('mousemove', resetTimer);
+document.addEventListener('mouseout', (e) => {
+    if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
+        timeoutId = setTimeout(hideContainer, 10000);
+    }
+});
+
+resetTimer();
