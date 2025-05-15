@@ -4,33 +4,35 @@
     body {
         margin: 0;
         padding: 0;
-        height: 100dvh;
+        height: 100svh;
         overflow: hidden;
         font-family: 'Noto Sans', sans-serif;
         background-color: var(--main-background);
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
     }
 
     .main_wrapper {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 70px);
+        height: 100%;
         overflow: hidden;
     }
 
-    .main_wrapper>* {
-        min-height: 0;
-        max-height: 100%;
-        overflow-y: auto;
-    }
-
     .main_container {
-        background-color: #0000;
+        background-color: transparent;
         padding: 10px;
         height: 100%;
         width: 100%;
         text-align: center;
         border-radius: 0;
-        overflow: hidden !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         backdrop-filter: blur(var(--main-blur));
     }
 
@@ -61,10 +63,8 @@
         background-color: #2B353B;
         border-radius: 10px;
         padding: 10px;
-        box-sizing: border-box;
-        font-family: sans-serif;
-        display: flex !important;
-        flex-direction: row !important;
+        display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 17px;
         box-shadow: 0 3px 10px #000;
@@ -88,34 +88,14 @@
         gap: 5px;
     }
 
-    .track-title {
-        margin: 0;
-        font-size: 16px;
-        text-align: left !important;
-        color: #fff;
-        display: none;
-    }
-
+    .track-title,
     .track-artist {
-        margin: 0;
-        font-size: 14px;
-        color: #fff8;
-        text-align: left !important;
         display: none;
     }
 
     .changelog {
         justify-content: center;
-        height: calc(100vh - 333px);
+        height: calc(100svh - 333px);
+        overflow-y: auto;
     }
-
-    /* .dev_container {
-        position: absolute;
-        bottom: 80px;
-        z-index: 10;
-        left: 10px;
-        width: 100%;
-        border: 0;
-        height: 10;
-    } */
 }
