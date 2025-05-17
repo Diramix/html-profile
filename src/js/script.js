@@ -256,6 +256,10 @@ function resetTimer() {
 }
 
 document.addEventListener('mousemove', resetTimer);
+document.addEventListener('touchstart', resetTimer);
+document.addEventListener('touchmove', resetTimer);
+document.addEventListener('scroll', resetTimer, { passive: true });
+
 document.addEventListener('mouseout', (e) => {
     if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
         timeoutId = setTimeout(hideContainer, 10000);
