@@ -232,6 +232,15 @@ body {
     padding: 15px;
 }
 
+.discord_profile_decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .changelog {
     text-align: left;
     font-size: 16px;
@@ -243,6 +252,7 @@ body {
     width: auto;
     overflow-y: auto;
     background-color: #fff5;
+    position: relative;
 }
 
 .changelog button {
