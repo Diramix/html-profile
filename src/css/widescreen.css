@@ -1,0 +1,9 @@
+@media (min-width: 1601px) {
+    .topbar {
+        width: 1600px;
+        align-items: center;
+        border-radius: 10px;
+        top: 10px;
+        border-width: 0;
+    }
+}
