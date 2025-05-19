@@ -140,14 +140,26 @@ mediaElements.forEach(media => {
 });
 
 // Title Animation
-let words = ["dir/a", "ban is so cute", "Miku!", "Pretty boy:3", "Furry💖", "Меняйте пол!", "Гойда!", "sudo", "pacman -Ass", "npm run zov", "goida run make", "help", "exit"];
-let currentText = words[0];
+let splashes = [];
+let currentText = "";
 let displayText = "";
 let textIndex = 0;
 let charIndex = 0;
 let typing = true;
 let cursorVisible = true;
 let pause = false;
+
+fetch("src/assets/splashes.txt")
+    .then(response => response.text())
+    .then(text => {
+        splashes = text.split("\n").filter(line => line.trim() !== "");
+        if (splashes.length === 0) return;
+        currentText = splashes[0];
+        setInterval(() => {
+            cursorVisible = !cursorVisible;
+        }, 500);
+        updateTitle();
+    });
 
 function updateTitle() {
     if (!pause) {
@@ -168,8 +180,8 @@ function updateTitle() {
                 charIndex--;
             } else {
                 pause = true;
-                textIndex = (textIndex + 1) % words.length;
-                currentText = words[textIndex];
+                textIndex = (textIndex + 1) % splashes.length;
+                currentText = splashes[textIndex];
                 setTimeout(() => {
                     typing = true;
                     pause = false;
@@ -181,12 +193,6 @@ function updateTitle() {
     document.title = displayText + (cursorVisible ? "_" : " ");
     setTimeout(updateTitle, 300);
 }
-
-setInterval(() => {
-    cursorVisible = !cursorVisible;
-}, 500);
-
-updateTitle();
 
 // Fading main_container
 let mainContainer = document.querySelector('.main_container');
