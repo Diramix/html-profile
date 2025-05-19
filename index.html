@@ -17,7 +17,7 @@
 
 <body link="#4392F6">
 	<button class="first_button"
-		onclick="var firstButton = document.getElementById('background-video'); firstButton.play(); this.style.opacity = '0'; this.style.pointerEvents = 'none';">
+		onclick="document.getElementById('apngStart').src = 'src/assets/intro3.png'; this.style.opacity = '0'; this.style.pointerEvents = 'none';">
 		Click to enter...
 	</button>
 	<div class="desktop topbar">
@@ -73,7 +73,8 @@
 					</div>
 					<div class="simple_block changelog">
 						<!-- <div class="mobile mobile_block_title">About me</div> -->
-						<img class="discord_profile_decoration" src="src/assets/intro3.png" alt="intro" />
+						<img id="apngStart" class="discord_profile_decoration" src="src/assets/intro3.png"
+							alt="intro" />
 						<div class="description"></div>
 					</div>
 					<div class="simple_block mobile bottom_links">
