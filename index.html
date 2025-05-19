@@ -20,7 +20,7 @@
 		onclick="var firstButton = document.getElementById('background-video'); firstButton.play(); this.style.opacity = '0'; this.style.pointerEvents = 'none';">
 		Click to enter...
 	</button>
-	<div class="topbar">
+	<div class="desktop topbar">
 		<div class="links_main_title">Links</div>
 		<div class="topbar_links">
 			<a href="https://www.last.fm/user/Diramix" class="topbar-link" target="_blank" id="top-discord">last.fm</a>
@@ -35,6 +35,9 @@
 	<video class="body2" id="background-video" disablePictureInPicture loop playsinline preload="metadata">
 		<source src="src/assets/bg.mp4" type="video/mp4">
 	</video>
+	<button id="mute-btn" aria-pressed="false">🔊</button>
+	<video id="background-video" src="your-video.mp4" autoplay loop></video>
+
 	<div class="main_wrapper">
 		<div class="main_container">
 			<div class="background_wrapper">
@@ -68,10 +71,12 @@
 							</audio>
 						</div>
 					</div>
-					<div class="changelog">
+					<div class="simple_block changelog">
+						<div class="mobile mobile_block_title">About me</div>
 						<div class="description"></div </div>
 					</div>
-					<div class="bottom_links">
+					<div class="simple_block mobile bottom_links">
+						<div class="mobile mobile_block_title">Links</div>
 						<a href="https://www.last.fm/user/Diramix" class="botton-link" target="_blank"
 							id="top-discord">last.fm</a>
 						<div class="separator"></div>

@@ -228,15 +228,17 @@ body {
     margin-top: 5px;
 }
 
+.simple_block {
+    padding: 15px;
+}
+
 .changelog {
     text-align: left;
     font-size: 16px;
     color: var(--font-color);
-    padding: 15px;
     border-radius: 8px;
     font-size: 14px;
     line-height: 2.2;
-    padding: 15px;
     height: 398px;
     width: auto;
     overflow-y: auto;
@@ -373,4 +375,24 @@ audio {
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
     content: url("https://cdn.discordapp.com/banners/710580442180485120/f4fb3fa6df495e1bf536e5d0ea89ed20.webp?size=1024&format=webp&width=1024&height=0");
     border-radius: 5px;
+}
+
+/* Mute Button */
+#mute-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    background: none;
+    border: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(30px);
+    padding: 2px;
+    border-radius: 0 10px 0 0;
+    z-index: 1;
+}
+
+#mute-btn.active {
+    color: red;
 }
