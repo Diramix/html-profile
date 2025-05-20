@@ -1,3 +1,34 @@
+// Waiting for loading
+document.body.style.pointerEvents = "none";
+
+const requiredFiles = [
+    "https://www.dropbox.com/scl/fi/h8yjwuuyjgn4gfuzx0equ/bg.mp4?rlkey=1v9migymc7htt5jguaayyszeb&st=4j3kxp4w&dl=1",
+    "https://www.dropbox.com/scl/fi/kg2t0einsy1jn947n1stg/fav.mp3?rlkey=g7n21v2zb911fnbz7oepkqa3p&st=y5gm2mzm&dl=1"
+];
+
+let loaded = 0;
+
+function checkReady() {
+    loaded++;
+    if (loaded === requiredFiles.length) {
+        document.body.style.pointerEvents = "auto";
+    }
+}
+
+requiredFiles.forEach(src => {
+    const isJS = src.endsWith(".js");
+    const element = document.createElement(isJS ? "script" : "img");
+    element.onload = checkReady;
+    element.onerror = checkReady;
+    if (isJS) {
+        element.src = src;
+        element.async = false;
+        document.head.appendChild(element);
+    } else {
+        element.src = src;
+    }
+});
+
 // Developers GitHub info
 const developers = [
     { apiUrl: 'https://api.github.com/users/diramix', id: 'Diramix' }
@@ -149,7 +180,7 @@ let typing = true;
 let cursorVisible = true;
 let pause = false;
 
-fetch("src/assets/splashes.txt")
+fetch("src/splashes.txt")
     .then(response => response.text())
     .then(text => {
         splashes = text.split("\n").filter(line => line.trim() !== "");
