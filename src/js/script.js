@@ -3,7 +3,7 @@ document.body.style.pointerEvents = "none";
 
 const requiredFiles = [
     "https://www.dropbox.com/scl/fi/h8yjwuuyjgn4gfuzx0equ/bg.mp4?rlkey=1v9migymc7htt5jguaayyszeb&st=4j3kxp4w&dl=1",
-    "https://www.dropbox.com/scl/fi/kg2t0einsy1jn947n1stg/fav.mp3?rlkey=g7n21v2zb911fnbz7oepkqa3p&st=y5gm2mzm&dl=1"
+    "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
 ];
 
 let loaded = 0;
