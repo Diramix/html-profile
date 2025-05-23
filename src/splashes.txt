@@ -11,3 +11,5 @@ pacman -Ass
 goida run make
 YandexMusicModClient
 PulseSync
+DirtyVibe
+html-profile
