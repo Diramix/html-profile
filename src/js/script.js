@@ -1,6 +1,5 @@
 // Waiting for loading
-document.body.style.pointerEvents = "none";
-
+const loader = document.getElementById("loader");
 const requiredFiles = [
     "https://www.dropbox.com/scl/fi/h8yjwuuyjgn4gfuzx0equ/bg.mp4?rlkey=1v9migymc7htt5jguaayyszeb&st=4j3kxp4w&dl=1",
     "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
@@ -8,25 +7,22 @@ const requiredFiles = [
 
 let loaded = 0;
 
-function checkReady() {
+function updateLoader() {
     loaded++;
+    const percent = Math.round((loaded / requiredFiles.length) * 100);
+    loader.textContent = `Loading: ${percent}%`;
     if (loaded === requiredFiles.length) {
-        document.body.style.pointerEvents = "auto";
+        loader.style.display = "none";
     }
 }
 
 requiredFiles.forEach(src => {
-    const isJS = src.endsWith(".js");
-    const element = document.createElement(isJS ? "script" : "img");
-    element.onload = checkReady;
-    element.onerror = checkReady;
-    if (isJS) {
-        element.src = src;
-        element.async = false;
-        document.head.appendChild(element);
-    } else {
-        element.src = src;
-    }
+    const isMedia = /\.(mp4|mp3|ogg|wav|webm)$/i.test(src);
+    const element = document.createElement(isMedia ? "video" : "img");
+    element.onloadeddata = updateLoader;
+    element.onerror = updateLoader;
+    element.src = src;
+    if (isMedia) element.preload = "auto";
 });
 
 // Developers GitHub info
