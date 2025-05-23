@@ -1,7 +1,7 @@
 // Waiting for loading
 const loader = document.getElementById("loader");
 const requiredFiles = [
-    "https://www.dropbox.com/scl/fi/h8yjwuuyjgn4gfuzx0equ/bg.mp4?rlkey=1v9migymc7htt5jguaayyszeb&st=4j3kxp4w&dl=1",
+    "https://www.dropbox.com/scl/fi/jfrdxfslak3u9b3ews3ld/output.mp4?rlkey=vcvit0xjo8m07bm427bmpa1yz&st=30rnkb3j&dl=1",
     "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
 ];
 
