@@ -34,88 +34,93 @@
 		</button>
 		<script src="src/js/first_button_action.js"></script>
 	</div>
-	<div class="desktop topbar_wrapper">
-		<div class="topbar">
-			<div class="links_main_title">Links</div>
-			<div class="topbar_links">
-				<a href="https://www.last.fm/user/Diramix" class="topbar-link" target="_blank"
-					id="top-discord">last.fm</a>
-				<a href="https://pinterest.com/diram1x/" class="topbar-link" target="_blank"
-					id="top-discord">Pinterest</a>
-				<a href="https://x.com/Diram1x" class="topbar-link" target="_blank" id="top-discord">Twitter</a>
-				<a href="https://discord.gg/ky6bcdy7KA" class="topbar-link" target="_blank" id="top-discord">Discord</a>
-				<a href="https://boosty.to/diramix" class="topbar-link" target="_blank" id="top-boosty">Boosty</a>
-				<a href="https://github.com/diramix/" class="topbar-link" target="_blank" id="top-github">GitHub</a>
-			</div>
-		</div>
-	</div>
-	<div id="gradient-overlay"></div>
 	<video class="body2" id="background-video" disablePictureInPicture loop playsinline preload="metadata">
 		<source
 			src="https://www.dropbox.com/scl/fi/jfrdxfslak3u9b3ews3ld/output.mp4?rlkey=vcvit0xjo8m07bm427bmpa1yz&st=30rnkb3j&dl=1"
 			type="video/mp4">
 	</video>
-	<button id="mute-btn" aria-pressed="false">🔊</button>
+	<div class="hidden_control">
+		<div class="desktop topbar_wrapper">
+			<div class="topbar">
+				<div class="links_main_title">Links</div>
+				<div class="topbar_links">
+					<a href="https://www.last.fm/user/Diramix" class="topbar-link" target="_blank"
+						id="top-discord">last.fm</a>
+					<a href="https://pinterest.com/diram1x/" class="topbar-link" target="_blank"
+						id="top-discord">Pinterest</a>
+					<a href="https://x.com/Diram1x" class="topbar-link" target="_blank" id="top-discord">Twitter</a>
+					<a href="https://discord.gg/ky6bcdy7KA" class="topbar-link" target="_blank"
+						id="top-discord">Discord</a>
+					<a href="https://boosty.to/diramix" class="topbar-link" target="_blank" id="top-boosty">Boosty</a>
+					<a href="https://github.com/diramix/" class="topbar-link" target="_blank" id="top-github">GitHub</a>
+				</div>
+			</div>
+		</div>
+		<div id="gradient-overlay"></div>
 
-	<div class="main_wrapper">
-		<div class="main_container">
-			<div class="background_wrapper">
-				<div class="main_title">(_　_)。゜zｚＺ</div>
-				<div class="dev_change">
-					<div class="developers">
+		<button id="mute-btn" aria-pressed="false">🔊</button>
 
-						<div class="dev_container">
-							<img src="https://avatars.githubusercontent.com/u/79011730?v=4" alt="" class="avatar"
-								onerror="this.onerror=null; this.src='./src/assets/fallback.png';">
-							<img class="avatar-frame"
-								src="https://cdn.discordapp.com/avatar-decoration-presets/a_3c97a2d37f433a7913a1c7b7a735d000.png?size=2048&passthrough=true"
-								alt="Frame">
-							<div class="dev_details">
-								<div class="nickname" id="Diramix"></div>
-								<div class="dev_description">Мразь</div>
+		<div class="main_wrapper">
+			<div class="main_container">
+				<div class="background_wrapper">
+					<div class="main_title">(_　_)。゜zｚＺ</div>
+					<div class="dev_change">
+						<div class="developers">
+
+							<div class="dev_container">
+								<img src="https://avatars.githubusercontent.com/u/79011730?v=4" alt="" class="avatar"
+									onerror="this.onerror=null; this.src='./src/assets/fallback.png';">
+								<img class="avatar-frame"
+									src="https://cdn.discordapp.com/avatar-decoration-presets/a_3c97a2d37f433a7913a1c7b7a735d000.png?size=2048&passthrough=true"
+									alt="Frame">
+								<div class="dev_details">
+									<div class="nickname" id="Diramix"></div>
+									<div class="dev_description">Мразь</div>
+								</div>
+								<div class="tooltip">Главная мразь дискорда</div>
 							</div>
-							<div class="tooltip">Главная мразь дискорда</div>
+
+							<div class="mini_title">Favorite track</div>
+							<div class="track-card">
+								<img class="track-cover"
+									src="https://i.scdn.co/image/ab67616d0000b273aef0d83e19fffab7a3f82e2b" alt="Cover">
+								<h3 class="track-title" title=''>Rotkäppchen</h3>
+								<p class="track-artist">Abor & Tynna</p>
+								<audio controls class="track-audio">
+									<source
+										src="https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
+										type="audio/mpeg">
+									Your browser does not support audio.
+								</audio>
+							</div>
 						</div>
 
-						<div class="mini_title">Favorite track</div>
-						<div class="track-card">
-							<img class="track-cover"
-								src="https://i.scdn.co/image/ab67616d0000b273aef0d83e19fffab7a3f82e2b" alt="Cover">
-							<h3 class="track-title" title=''>Rotkäppchen</h3>
-							<p class="track-artist">Abor & Tynna</p>
-							<audio controls class="track-audio">
-								<source
-									src="https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
-									type="audio/mpeg">
-								Your browser does not support audio.
-							</audio>
+						<div class="simple_block changelog">
+							<!-- <div class="mobile mobile_block_title">About me</div> -->
+							<img id="apngStart" class="discord_profile_decoration" src="" alt="intro" />
+							<div class="description"></div>
 						</div>
-					</div>
 
-					<div class="simple_block changelog">
-						<!-- <div class="mobile mobile_block_title">About me</div> -->
-						<img id="apngStart" class="discord_profile_decoration" src="" alt="intro" />
-						<div class="description"></div>
-					</div>
-
-					<div class="simple_block mobile bottom_links">
-						<div class="mobile mobile_block_title">Links</div>
-						<a href="https://www.last.fm/user/Diramix" class="botton-link" target="_blank"
-							id="top-discord">last.fm</a>
-						<div class="separator"></div>
-						<a href="https://pinterest.com/diram1x/" class="botton-link" target="_blank"
-							id="top-discord">Pinterest</a>
-						<div class="separator"></div>
-						<a href="https://x.com/Diram1x" class="botton-link" target="_blank" id="top-discord">Twitter</a>
-						<div class="separator"></div>
-						<a href="https://discord.gg/ky6bcdy7KA" class="botton-link" target="_blank"
-							id="top-discord">Discord</a>
-						<div class="separator"></div>
-						<a href="https://boosty.to/diramix" class="botton-link" target="_blank"
-							id="top-boosty">Boosty</a>
-						<div class="separator"></div>
-						<a href="https://github.com/diramix/" class="botton-link" target="_blank"
-							id="top-github">GitHub</a>
+						<div class="simple_block mobile bottom_links">
+							<div class="mobile mobile_block_title">Links</div>
+							<a href="https://www.last.fm/user/Diramix" class="botton-link" target="_blank"
+								id="top-discord">last.fm</a>
+							<div class="separator"></div>
+							<a href="https://pinterest.com/diram1x/" class="botton-link" target="_blank"
+								id="top-discord">Pinterest</a>
+							<div class="separator"></div>
+							<a href="https://x.com/Diram1x" class="botton-link" target="_blank"
+								id="top-discord">Twitter</a>
+							<div class="separator"></div>
+							<a href="https://discord.gg/ky6bcdy7KA" class="botton-link" target="_blank"
+								id="top-discord">Discord</a>
+							<div class="separator"></div>
+							<a href="https://boosty.to/diramix" class="botton-link" target="_blank"
+								id="top-boosty">Boosty</a>
+							<div class="separator"></div>
+							<a href="https://github.com/diramix/" class="botton-link" target="_blank"
+								id="top-github">GitHub</a>
+						</div>
 					</div>
 				</div>
 			</div>
