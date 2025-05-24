@@ -1,5 +1,6 @@
 // Waiting for loading
 const loader = document.getElementById("loader");
+const loadingWrapper = document.getElementById("loadingWrapper");
 const requiredFiles = [
     "https://www.dropbox.com/scl/fi/jfrdxfslak3u9b3ews3ld/output.mp4?rlkey=vcvit0xjo8m07bm427bmpa1yz&st=30rnkb3j&dl=1",
     "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=c7hfvf94&dl=1"
@@ -12,7 +13,7 @@ function updateLoader() {
     const percent = Math.round((loaded / requiredFiles.length) * 100);
     loader.textContent = `Loading: ${percent}%`;
     if (loaded === requiredFiles.length) {
-        loader.style.display = "none";
+        loadingWrapper.style.display = "none";
     }
 }
 

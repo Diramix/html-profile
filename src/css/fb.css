@@ -1,0 +1,30 @@
+#fb_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(120deg,
+            var(--first-gradient-color) 0%,
+            var(--second-gradient-color) 70%); */
+    transition: opacity 1s ease-out;
+    backdrop-filter: blur(30px) brightness(0.81);
+    z-index: 9999;
+}
+
+.first_button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: 0;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.loading_wrapper {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg,
+            var(--first-gradient-color) 0%,
+            var(--second-gradient-color) 70%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.loading_gif {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    right: 20px;
+    bottom: 20px;
+}

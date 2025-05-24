@@ -12,6 +12,8 @@
 	<title>dir/a</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="src/css/loading.css">
+	<link rel="stylesheet" href="src/css/fb.css">
 	<link rel="stylesheet" href="src/css/styles.css">
 	<link rel="stylesheet" href="src/css/mobile.css">
 	<link rel="stylesheet" href="src/css/color-scheme.css">
@@ -21,11 +23,17 @@
 </head>
 
 <body link="#4392F6">
-	<div id="loader">Loading: 0%</div>
-	<button class="first_button"
-		onclick="var bgvideo = document.getElementById('background-video'); bgvideo.play(); document.getElementById('apngStart').src = 'src/assets/intro3.png'; this.style.opacity = '0'; this.style.pointerEvents = 'none';">
-		Click to enter...
-	</button>
+	<div class="loading_wrapper" id="loadingWrapper">
+		<div id="loader">Loading: 0%</div>
+		<img src="src/assets/loading.gif" alt="src/assets/fallback.png" class="desktop loading_gif">
+	</div>
+
+	<div class="fb_container" id="fb_container">
+		<button class="first_button" onclick="handleFirstButtonClick()">
+			Click to enter...
+		</button>
+		<script src="src/js/first_button_action.js"></script>
+	</div>
 	<div class="desktop topbar_wrapper">
 		<div class="topbar">
 			<div class="links_main_title">Links</div>
@@ -86,8 +94,7 @@
 
 					<div class="simple_block changelog">
 						<!-- <div class="mobile mobile_block_title">About me</div> -->
-						<img id="apngStart" class="discord_profile_decoration" src="src/assets/intro3.png"
-							alt="intro" />
+						<img id="apngStart" class="discord_profile_decoration" src="" alt="intro" />
 						<div class="description"></div>
 					</div>
 
