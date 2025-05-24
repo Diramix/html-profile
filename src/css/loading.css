@@ -5,9 +5,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(0deg,
+    /* background: linear-gradient(0deg,
             var(--first-gradient-color) 0%,
-            var(--second-gradient-color) 100%);
+            var(--second-gradient-color) 100%); */
+    background-color: #000;
     color: white;
     display: flex;
     align-items: center;
