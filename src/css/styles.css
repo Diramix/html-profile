@@ -99,9 +99,9 @@ body {
 }
 
 .main_container {
-    background: linear-gradient(0deg,
-            #276788 0%,
-            #B0E5F6 100%);
+    background: linear-gradient(180deg,
+            #c7b8f1 10%,
+            #ed61c2 90%);
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
     padding: 5px;
@@ -383,7 +383,7 @@ audio {
 
 /* Замена баннера */
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
-    content: url("https://cdn.discordapp.com/banners/710580442180485120/f4fb3fa6df495e1bf536e5d0ea89ed20.webp?size=1024&format=webp&width=1024&height=0");
+    content: url("https://cdn.discordapp.com/banners/710580442180485120/bc4d5061526c95b3c2bf86c7b89a2561.webp?size=1024");
     border-radius: 5px;
 }
 
