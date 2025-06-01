@@ -3,7 +3,7 @@ const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
 const requiredFiles = [
     "https://www.dropbox.com/scl/fi/k0mzsi9ktq9chj8tcwsl8/bg.mp4?rlkey=u20frt59aale1awxy75vs33no&st=9d83h0bc&dl=1",
-    "https://www.dropbox.com/scl/fi/j80sm4j8cqn9ucqska58e/fav.mp3?rlkey=tonl7mes0rfgvaghmj16wnhtc&st=7f7dux1b&dl=1"
+    "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=51ig99p1&dl=1"
 ];
 
 let loaded = 0;
