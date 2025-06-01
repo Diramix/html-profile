@@ -2,7 +2,7 @@
 const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
 const requiredFiles = [
-    "https://www.dropbox.com/scl/fi/jfrdxfslak3u9b3ews3ld/output.mp4?rlkey=vcvit0xjo8m07bm427bmpa1yz&st=btmtv5ny&dl=1",
+    "https://www.dropbox.com/scl/fi/k0mzsi9ktq9chj8tcwsl8/bg.mp4?rlkey=u20frt59aale1awxy75vs33no&st=9d83h0bc&dl=1",
     "https://www.dropbox.com/scl/fi/j80sm4j8cqn9ucqska58e/fav.mp3?rlkey=tonl7mes0rfgvaghmj16wnhtc&st=7f7dux1b&dl=1"
 ];
 
