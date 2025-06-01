@@ -226,8 +226,10 @@ function updateTitle() {
 let mainContainer = document.querySelector('.main_container');
 let timeoutId;
 let isHidden = false;
+let players = new Map();
 
 function hideContainer() {
+    if (isAnyVideoPlaying()) return;
     mainContainer.style.transition = 'opacity 5s';
     mainContainer.style.opacity = '0';
     isHidden = true;
@@ -242,9 +244,19 @@ function showContainer() {
 }
 
 function resetTimer() {
+    if (isAnyVideoPlaying()) {
+        showContainer();
+        clearTimeout(timeoutId);
+        return;
+    }
+
     showContainer();
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(hideContainer, 10000);
+    timeoutId = setTimeout(() => {
+        if (!isAnyVideoPlaying()) {
+            hideContainer();
+        }
+    }, 10000);
 }
 
 document.addEventListener('mousemove', resetTimer);
@@ -255,11 +267,52 @@ document.addEventListener('scroll', resetTimer, { passive: true });
 
 document.addEventListener('mouseout', (e) => {
     if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
-        timeoutId = setTimeout(hideContainer, 10000);
+        timeoutId = setTimeout(() => {
+            if (!isAnyVideoPlaying()) {
+                hideContainer();
+            }
+        }, 10000);
     }
 });
 
 resetTimer();
+
+function isAnyVideoPlaying() {
+    for (const player of players.values()) {
+        const state = player.getPlayerState();
+        // Состояния: -1 = unstarted, 0 = ended, 1 = playing, 2 = paused, 3 = buffering, 5 = cued
+        if (state === 1) return true; // playing
+    }
+    return false;
+}
+
+function loadYouTubeAPI(callback) {
+    if (window.YT && window.YT.Player) {
+        callback();
+    } else {
+        let tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        window.onYouTubeIframeAPIReady = () => callback();
+    }
+}
+
+function setupPlayers() {
+    document.querySelectorAll('iframe.youtube-embed').forEach((iframe) => {
+        if (!players.has(iframe)) {
+            const player = new YT.Player(iframe, {
+                events: {
+                    'onStateChange': resetTimer
+                }
+            });
+            players.set(iframe, player);
+        }
+    });
+}
+
+loadYouTubeAPI(setupPlayers);
 
 // Mute Button
 const video = document.getElementById('background-video');
