@@ -13,3 +13,4 @@ YandexMusicModClient
 PulseSync
 DirtyVibe
 html-profile
+9heaven
