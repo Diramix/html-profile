@@ -5,9 +5,6 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* background: linear-gradient(0deg,
-            var(--first-gradient-color) 0%,
-            var(--second-gradient-color) 100%); */
     background-color: #000;
     color: white;
     display: flex;
@@ -16,6 +13,14 @@
     font-size: 24px;
     font-weight: bold;
     font-family: sans-serif;
+}
+
+.loading_thumbnail {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .loading_gif {
