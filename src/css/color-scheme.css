@@ -1,10 +1,25 @@
-:root {
+.dark-theme {
+    --background-dark: #0D0D0D;
+    --background-changelog: #1E2027;
+    --font-color: #D2CFE7;
+    --block-title-font: #48535D;
+    --wrapper-color: rgba(0, 0, 0, 0.8);
+    --simple-block-background-color: #fff1;
+    --dev-description-text-color: #D5D1E7;
+    --tooltip-background-color: #1E141D;
+    --main-blur: 30px;
+    --main-brightness: 0.5;
+}
+
+.light-theme {
     --background-dark: #0D0D0D;
     --background-changelog: #1E2027;
     --font-color: #2B333D;
-    --tooltip: #F2EEFF;
     --block-title-font: #48535D;
-
+    --wrapper-color: #fff8;
+    --simple-block-background-color: #fff5;
+    --dev-description-text-color: #5F606A;
+    --tooltip-background-color: #F2EEFF;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }

@@ -111,7 +111,7 @@ body {
 }
 
 .background_wrapper {
-    background-color: #fff8;
+    background-color: var(--wrapper-color);
     border-radius: 13px;
     padding: 15px;
 }
@@ -181,7 +181,7 @@ body {
 .tooltip {
     visibility: hidden;
     opacity: 0;
-    background-color: var(--tooltip);
+    background-color: var(--tooltip-background-color);
     color: var(--font-color);
     text-align: center;
     border-radius: 12px;
@@ -243,7 +243,7 @@ body {
 
 .dev_description {
     font-size: 12px;
-    color: #5F606A;
+    color: var(--dev-description-text-color);
     margin-top: 5px;
 }
 
@@ -270,7 +270,7 @@ body {
     height: 398px;
     width: 100%;
     overflow-y: auto;
-    background-color: #fff5;
+    background-color: var(--simple-block-background-color);
     position: relative;
 }
 

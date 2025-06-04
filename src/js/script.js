@@ -26,63 +26,6 @@ requiredFiles.forEach(src => {
     if (isMedia) element.preload = "auto";
 });
 
-// Developers GitHub info
-const developers = [
-    { apiUrl: 'https://api.github.com/users/diramix', id: 'Diramix' }
-];
-
-const fetchDeveloperData = (dev) => {
-    return fetch(dev.apiUrl)
-        .then(response => response.ok ? response.json() : null)
-        .then(data => {
-            const nicknameElement = document.querySelector(`.nickname#${dev.id}`);
-            if (!nicknameElement) return;
-
-            const content = data && data.login ? data.login : 'Unknown';
-            const linkElement = document.createElement(content === 'Unknown' ? 'span' : 'a');
-
-            if (content !== 'Unknown') {
-                linkElement.href = `https://github.com/${data.login}`;
-                linkElement.target = '_blank';
-            }
-
-            linkElement.textContent = content;
-            nicknameElement.appendChild(linkElement);
-        })
-        .catch(() => handleError(dev.id));
-};
-
-const handleError = (id) => {
-    const nicknameElement = document.querySelector(`.nickname#${id}`);
-    if (nicknameElement) {
-        const span = document.createElement('span');
-        span.textContent = 'Unknown';
-        nicknameElement.appendChild(span);
-    }
-};
-
-const fetchReleaseData = () => {
-    return fetch('https://raw.githubusercontent.com/Diramix/Diramix/refs/heads/main/README.md')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch README.md');
-            }
-            return response.text();
-        })
-        .then(data => updateDescription(data))
-        .catch(handleReleaseError);
-};
-
-const updateDescription = (description) => {
-    const converter = new showdown.Converter({ simplifiedAutoLink: true, openLinksInNewWindow: true });
-    const htmlDescription = converter.makeHtml(description || '');
-    const descriptionElement = document.querySelector('.description');
-
-    if (descriptionElement) {
-        descriptionElement.innerHTML = htmlDescription;
-    }
-};
-
 // Получение README.md
 const handleReleaseError = () => {
     console.error('Error fetching release data');
@@ -105,7 +48,25 @@ const handleReleaseError = () => {
     skillIssuesElements.forEach(element => element.style.display = 'none');
 };
 
-developers.forEach(fetchDeveloperData);
+const fetchReleaseData = () => {
+    fetch('https://raw.githubusercontent.com/Diramix/Diramix/refs/heads/main/README.md')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch README.md');
+            return response.text();
+        })
+        .then(data => updateDescription(data))
+        .catch(handleReleaseError);
+};
+
+const updateDescription = (description) => {
+    const converter = new showdown.Converter({ simplifiedAutoLink: true, openLinksInNewWindow: true });
+    const htmlDescription = converter.makeHtml(description || '');
+    const descriptionElement = document.querySelector('.description');
+    if (descriptionElement) {
+        descriptionElement.innerHTML = htmlDescription;
+    }
+};
+
 fetchReleaseData();
 
 // Fade Volume
