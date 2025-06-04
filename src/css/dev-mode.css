@@ -1,0 +1,7 @@
+.dev_mode {
+    #background-video {
+        background-image: url("https://pbs.twimg.com/media/GsgoTVGWoAA0UiY?format=jpg&name=4096x4096");
+        background-size: cover;
+        background-position: center;
+    }
+}
