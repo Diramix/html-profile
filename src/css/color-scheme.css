@@ -7,6 +7,8 @@
     --simple-block-background-color: #fff1;
     --dev-description-text-color: #D5D1E7;
     --tooltip-background-color: #1E141D;
+    --scroll-background-color: #615762;
+    --scroll-background-color-hovered: #998a9b;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }
@@ -20,6 +22,8 @@
     --simple-block-background-color: #fff5;
     --dev-description-text-color: #5F606A;
     --tooltip-background-color: #F2EEFF;
+    --scroll-background-color: #A391A1;
+    --scroll-background-color-hovered: #685c66;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }
