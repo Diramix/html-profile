@@ -109,7 +109,7 @@ developers.forEach(fetchDeveloperData);
 fetchReleaseData();
 
 // Fade Volume
-let mediaElements = document.querySelectorAll('audio, video');
+let mediaElements = document.querySelectorAll('.track-audio, .body2');
 
 mediaElements.forEach(media => {
     media.fadeInInterval = null;
