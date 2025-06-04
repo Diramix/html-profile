@@ -9,6 +9,8 @@
     --tooltip-background-color: #1E141D;
     --scroll-background-color: #615762;
     --scroll-background-color-hovered: #998a9b;
+    --favorite-track-invert-filter: 100%;
+    --favorite-track-shadow-color: #E9E7E1;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }
@@ -24,6 +26,8 @@
     --tooltip-background-color: #F2EEFF;
     --scroll-background-color: #A391A1;
     --scroll-background-color-hovered: #685c66;
+    --favorite-track-invert-filter: 0%;
+    --favorite-track-shadow-color: #16181E;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }

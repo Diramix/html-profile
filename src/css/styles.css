@@ -395,10 +395,9 @@ audio {
     max-width: 220px;
     border-radius: 12px;
     background: #F1F3F4;
-    /* box-shadow: 0 3px 10px #E9E7E1; */
-    box-shadow: 0 3px 10px #16181E;
+    box-shadow: 0 3px 10px var(--favorite-track-shadow-color);
     padding: 6px;
-    /* filter: invert(100%); */
+    filter: invert(var(--favorite-track-invert-filter));
 }
 
 /* Замена баннера */
