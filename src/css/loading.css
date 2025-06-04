@@ -21,6 +21,7 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
 .loading_gif {
@@ -29,4 +30,5 @@
     height: 150px;
     right: 20px;
     bottom: 20px;
+    pointer-events: none;
 }

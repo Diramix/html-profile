@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
-    /* user-select: none; */
+    user-select: none;
 }
 
 body {
@@ -365,6 +365,7 @@ iframe {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 3px 10px #16181E;
+    pointer-events: none;
 }
 
 .track-title {
@@ -404,6 +405,7 @@ audio {
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
     content: url("https://cdn.discordapp.com/banners/710580442180485120/bc4d5061526c95b3c2bf86c7b89a2561.webp?size=1024");
     border-radius: 5px;
+    pointer-events: none;
 }
 
 /* Mute Button */
