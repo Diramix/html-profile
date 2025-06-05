@@ -279,6 +279,13 @@ loadYouTubeAPI(setupPlayers);
 const video = document.getElementById('background-video');
 const btn = document.getElementById('mute-btn');
 
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    video.muted = true;
+    btn.classList.add('active');
+    btn.textContent = '🔇';
+    btn.setAttribute('aria-pressed', true);
+}
+
 btn.addEventListener('click', () => {
     video.muted = !video.muted;
     btn.classList.toggle('active', video.muted);
