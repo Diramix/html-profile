@@ -1,3 +1,7 @@
+if (location.protocol === 'file:' && !document.body.classList.contains('dev-mode')) {
+      document.body.classList.add('dev-mode');
+}
+
 function updateIndev() {
       const el = document.querySelector('.indev');
       const now = new Date();
