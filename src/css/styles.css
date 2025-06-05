@@ -296,6 +296,7 @@ body {
 .simple_block {
     padding: 15px;
     background-color: var(--simple-block-background-color);
+    border-radius: 10px;
 }
 
 .discord_profile_decoration {
@@ -311,7 +312,6 @@ body {
     text-align: left;
     font-size: 16px;
     color: var(--font-color);
-    border-radius: 8px;
     font-size: 14px;
     line-height: 2.2;
     height: 398px;
@@ -323,7 +323,6 @@ body {
 .changelog button {
     display: block;
     width: 100%;
-    border-radius: 100px;
     border: none;
     color: #fff;
     font-weight: 800;
@@ -378,7 +377,6 @@ iframe {
     width: 220px;
     height: 290px;
     border: 0 solid;
-    border-radius: 10px;
     background-color: var(--simple-block-background-color);
     padding: 10px;
     box-sizing: border-box;

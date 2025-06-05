@@ -50,32 +50,8 @@
 			<div class="topbar">
 				<div class="links_main_title">Links</div>
 				<div class="Experiments topbar-controls">
-					<div class="topbar_links">
-						<a href="https://www.last.fm/user/Diramix" class="topbar-link" target="_blank">last.fm</a>
-						<a href="https://pinterest.com/diram1x/" class="topbar-link" target="_blank">Pinterest</a>
-						<a href="https://x.com/Diram1x" class="topbar-link" target="_blank">Twitter</a>
-						<a href="https://discord.gg/ky6bcdy7KA" class="topbar-link" target="_blank">Discord</a>
-						<a href="https://boosty.to/diramix" class="topbar-link" target="_blank">Boosty</a>
-						<a href="https://github.com/diramix/" class="topbar-link" target="_blank">GitHub</a>
-						<a href="https://open.spotify.com/user/31aorysoanwbjcrfk2ikjfcl6pd4" class="topbar-link"
-							target="_blank">Spotify</a>
-					</div>
-					<div class="topbar_buttons">
-						<button class="topbar-button"
-							onclick="window.open('https://www.last.fm/user/Diramix', '_blank')">last.fm</button>
-						<button class="topbar-button"
-							onclick="window.open('https://pinterest.com/diram1x/', '_blank')">Pinterest</button>
-						<button class="topbar-button"
-							onclick="window.open('https://x.com/Diram1x', '_blank')">Twitter</button>
-						<button class="topbar-button"
-							onclick="window.open('https://discord.gg/ky6bcdy7KA', '_blank')">Discord</button>
-						<button class="topbar-button"
-							onclick="window.open('https://boosty.to/diramix', '_blank')">Boosty</button>
-						<button class="topbar-button"
-							onclick="window.open('https://github.com/diramix/', '_blank')">GitHub</button>
-						<button class="topbar-button"
-							onclick="window.open('https://open.spotify.com/user/31aorysoanwbjcrfk2ikjfcl6pd4', '_blank')">Spotify</button>
-					</div>
+					<div class="topbar_links" id="topbarLinks"></div>
+					<div class="topbar_buttons" id="topbarButtons"></div>
 				</div>
 			</div>
 		</div>
@@ -116,7 +92,7 @@
 							</div>
 
 							<div class="mini_title">Favorite track</div>
-							<div class="track-card">
+							<div class="simple_block track-card">
 								<img class="track-cover"
 									src="https://i.scdn.co/image/ab67616d0000b2736f8f8ecb12008a8fe9a55c44" alt="Cover">
 								<h3 class="track-title">Lolly Bomb</h3>
@@ -136,22 +112,9 @@
 							<div class="description"></div>
 						</div>
 
-						<div class="simple_block mobile bottom_links">
+						<div class="mobile simple_block mobileLinks_Wrapper">
 							<div class="mobile mobile_block_title">Links</div>
-							<a href="https://www.last.fm/user/Diramix" class="botton-link" target="_blank">last.fm</a>
-							<div class="separator"></div>
-							<a href="https://pinterest.com/diram1x/" class="botton-link" target="_blank">Pinterest</a>
-							<div class="separator"></div>
-							<a href="https://x.com/Diram1x" class="botton-link" target="_blank">Twitter</a>
-							<div class="separator"></div>
-							<a href="https://discord.gg/ky6bcdy7KA" class="botton-link" target="_blank">Discord</a>
-							<div class="separator"></div>
-							<a href="https://boosty.to/diramix" class="botton-link" target="_blank">Boosty</a>
-							<div class="separator"></div>
-							<a href="https://github.com/diramix/" class="botton-link" target="_blank">GitHub</a>
-							<div class="separator"></div>
-							<a href="https://open.spotify.com/user/31aorysoanwbjcrfk2ikjfcl6pd4" class="botton-link"
-								target="_blank">Spotify</a>
+							<div id="mobileLinks"></div>
 						</div>
 					</div>
 				</div>
