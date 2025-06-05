@@ -2,6 +2,46 @@ if (location.protocol === 'file:' && !document.body.classList.contains('dev-mode
       document.body.classList.add('dev-mode');
 }
 
+const buttons = [
+      {
+            id: 'themeToggleBtn',
+            onClick: () => {
+                  const body = document.body;
+                  body.classList.toggle('dark-theme');
+                  body.classList.toggle('light-theme');
+            }
+      },
+      {
+            id: 'toggleBgImg',
+            onClick: () => {
+                  const video = document.getElementById('background-video');
+                  const bgCover = document.getElementById('dev-bg-cover');
+
+                  if (video.style.display === 'none') {
+                        video.pause();
+                        video.currentTime = 0;
+                        video.style.display = '';
+                        bgCover.style.display = 'none';
+                        bgCover.style.backgroundImage = '';
+                        video.play();
+                  } else {
+                        video.pause();
+                        video.style.display = 'none';
+                        bgCover.style.backgroundImage = 'url("https://github.com/Diramix/html-profile/raw/main/src/assets/dev-mode-bg.jpg")';
+                        bgCover.style.display = 'block';
+                  }
+            }
+      },
+      {
+            id: 'toggleNextButtons',
+            onClick: () => {
+                  const topbarControls = document.querySelector('.topbar-controls');
+                  topbarControls.classList.toggle('Experiments');
+                  topbarControls.classList.toggle('next_buttons');
+            }
+      }
+];
+
 function updateIndev() {
       const el = document.querySelector('.indev');
       const now = new Date();
@@ -22,8 +62,8 @@ function updateIndev() {
       const theme = document.body.classList.contains('dark-theme') ? 'Dark' : 'Light';
 
       let domain = location.hostname;
-      if (!domain || domain === "") {
-            const pathParts = location.pathname.split("/");
+      if (!domain) {
+            const pathParts = location.pathname.split('/');
             domain = pathParts[pathParts.length - 1] || 'localfile.html';
       }
 
@@ -55,32 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('resize', updateIndev);
       window.addEventListener('scroll', updateIndev);
 
-      document.getElementById('themeToggleBtn').addEventListener('click', () => {
-            if (document.body.classList.contains('dark-theme')) {
-                  document.body.classList.remove('dark-theme');
-                  document.body.classList.add('light-theme');
-            } else {
-                  document.body.classList.remove('light-theme');
-                  document.body.classList.add('dark-theme');
-            }
-      });
-
-      document.getElementById('toggleBgImg').addEventListener('click', () => {
-            const video = document.getElementById('background-video');
-            const bgCover = document.getElementById('dev-bg-cover');
-
-            if (video.style.display === 'none') {
-                  video.pause();
-                  video.currentTime = 0;
-                  video.style.display = '';
-                  bgCover.style.display = 'none';
-                  bgCover.style.backgroundImage = '';
-                  video.play();
-            } else {
-                  video.pause();
-                  video.style.display = 'none';
-                  bgCover.style.backgroundImage = 'url("https://github.com/Diramix/html-profile/raw/main/src/assets/dev-mode-bg.jpg")';
-                  bgCover.style.display = 'block';
-            }
+      buttons.forEach(({ id, onClick }) => {
+            const btn = document.getElementById(id);
+            if (btn) btn.addEventListener('click', onClick);
       });
 });
