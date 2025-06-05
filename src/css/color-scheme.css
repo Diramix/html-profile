@@ -13,6 +13,7 @@
     --favorite-track-invert-filter: 100%;
     --favorite-track-shadow-color: #E9E7E1;
     --favorite-track-text-artist-color: #fff8;
+    --separator-color: #fff2;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }
@@ -32,6 +33,7 @@
     --favorite-track-invert-filter: 0%;
     --favorite-track-shadow-color: #16181E;
     --favorite-track-text-artist-color: #0008;
+    --separator-color: #0002;
     --main-blur: 30px;
     --main-brightness: 0.5;
 }

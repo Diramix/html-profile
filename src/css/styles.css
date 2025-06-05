@@ -398,6 +398,7 @@ audio {
     border: none;
     position: fixed;
     backdrop-filter: blur(30px);
+    background-color: var(--topbar-background-color);
     padding: 2px;
     z-index: 1;
     left: 10px;
