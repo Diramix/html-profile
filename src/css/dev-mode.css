@@ -1,7 +1,9 @@
 .dev-mode {
+    background-image: url("https://github.com/Diramix/html-profile/blob/main/src/assets/dev-mode-bg.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+
     #background-video {
-        background-image: url("https://github.com/Diramix/html-profile/blob/main/src/assets/dev-mode-bg.jpg?raw=true");
-        background-size: cover;
-        background-position: center;
+        display: none;
     }
 }

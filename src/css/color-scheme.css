@@ -1,3 +1,8 @@
+:root {
+    --main-blur: 30px;
+    --main-brightness: 0.5;
+}
+
 .dark-theme {
     --topbar-background-color: #0D0D0D90;
     --background-dark: #0D0D0D;
@@ -14,8 +19,6 @@
     --favorite-track-shadow-color: #E9E7E1;
     --favorite-track-text-artist-color: #fff8;
     --separator-color: #fff2;
-    --main-blur: 30px;
-    --main-brightness: 0.5;
 }
 
 .light-theme {
@@ -34,6 +37,4 @@
     --favorite-track-shadow-color: #16181E;
     --favorite-track-text-artist-color: #0008;
     --separator-color: #0002;
-    --main-blur: 30px;
-    --main-brightness: 0.5;
 }
