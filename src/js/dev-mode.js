@@ -67,22 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById('toggleBgImg').addEventListener('click', () => {
             const video = document.getElementById('background-video');
-            const devMode = document.querySelector('.dev-mode');
+            const bgCover = document.getElementById('dev-bg-cover');
 
             if (video.style.display === 'none') {
                   video.pause();
                   video.currentTime = 0;
                   video.style.display = '';
-                  devMode.style.backgroundImage = '';
-                  devMode.style.backgroundSize = '';
-                  devMode.style.backgroundPosition = '';
+                  bgCover.style.display = 'none';
+                  bgCover.style.backgroundImage = '';
                   video.play();
             } else {
                   video.pause();
                   video.style.display = 'none';
-                  devMode.style.backgroundImage = 'url("https://github.com/Diramix/html-profile/raw/main/src/assets/dev-mode-bg.jpg")';
-                  devMode.style.backgroundSize = 'cover';
-                  devMode.style.backgroundPosition = 'center';
+                  bgCover.style.backgroundImage = 'url("https://github.com/Diramix/html-profile/raw/main/src/assets/dev-mode-bg.jpg")';
+                  bgCover.style.display = 'block';
             }
       });
 });

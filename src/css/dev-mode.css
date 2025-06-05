@@ -67,3 +67,18 @@
 .dev-menu button:hover {
     background: var(--topbar-background-color);
 }
+
+#dev-bg-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    pointer-events: none;
+    display: none;
+}
