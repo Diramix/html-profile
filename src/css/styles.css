@@ -15,6 +15,7 @@ body {
 .hidden_control {
     opacity: 0;
     transition: opacity 1s ease;
+    background-color: var(--dimmer-control);
 }
 
 .topbar_wrapper {
@@ -142,7 +143,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--dimmer-control);
 }
 
 .main_container {
