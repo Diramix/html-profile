@@ -226,6 +226,8 @@ body {
 
 .tooltip {
     visibility: hidden;
+    display: flex;
+    flex-direction: row;
     opacity: 0;
     background-color: var(--tooltip-background-color);
     color: var(--font-color);
@@ -238,7 +240,37 @@ body {
     transform: translateX(-50%);
     transition: opacity 0.3s;
     white-space: nowrap;
-    z-index: 1;
+    z-index: 2;
+    gap: 5px;
+}
+
+.role {
+    display: flex;
+    background-color: var(--role-background-color);
+    border-radius: 5px;
+    gap: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.role_color {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.role_color.white {
+    background-color: white;
+}
+
+.role_color.blue {
+    background-color: blue;
+}
+
+.role_color.red {
+    background-color: red;
 }
 
 .dev_container:hover .tooltip {

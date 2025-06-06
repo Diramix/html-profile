@@ -21,6 +21,7 @@
     --favorite-track-shadow-color: #E9E7E1;
     --favorite-track-text-artist-color: #fff8;
     --separator-color: #fff2;
+    --role-background-color: #fff1;
 }
 
 .light-theme {
@@ -41,4 +42,5 @@
     --favorite-track-shadow-color: #16181E;
     --favorite-track-text-artist-color: #0008;
     --separator-color: #0002;
+    --role-background-color: #0001;
 }
