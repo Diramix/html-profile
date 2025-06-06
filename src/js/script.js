@@ -1,11 +1,3 @@
-// Auto dark theme
-// const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-// const body = document.body;
-
-// if (prefersDark) {
-//     body.classList.replace('light-theme', 'dark-theme');
-// }
-
 // Waiting for loading
 const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
@@ -283,22 +275,61 @@ function setupPlayers() {
 
 loadYouTubeAPI(setupPlayers);
 
-// Mute Button
+// Theme control
 const video = document.getElementById('background-video');
-const btn = document.getElementById('mute-btn');
+const muteBtn = document.getElementById('mute-btn');
+const themeBtn = document.getElementById('toggle-theme-btn');
+const body = document.body;
 
+// Mute Button
 if (/Mobi|Android/i.test(navigator.userAgent)) {
     video.muted = true;
-    btn.classList.add('active');
-    btn.textContent = '🔇';
-    btn.setAttribute('aria-pressed', true);
+    muteBtn.classList.add('active');
+    muteBtn.textContent = '🔇';
+    muteBtn.setAttribute('aria-pressed', true);
 }
 
-btn.addEventListener('click', () => {
+muteBtn.addEventListener('click', () => {
     video.muted = !video.muted;
-    btn.classList.toggle('active', video.muted);
-    btn.textContent = video.muted ? '🔇' : '🔊';
-    btn.setAttribute('aria-pressed', video.muted);
+    muteBtn.classList.toggle('active', video.muted);
+    muteBtn.textContent = video.muted ? '🔇' : '🔊';
+    muteBtn.setAttribute('aria-pressed', video.muted);
+});
+
+// Change the gender!
+function applyTheme(theme) {
+    body.classList.remove('light-theme', 'dark-theme');
+    body.classList.add(theme);
+    themeBtn.textContent = theme === 'dark-theme' ? '🌙' : '☀️';
+    themeBtn.setAttribute('aria-pressed', theme === 'dark-theme');
+}
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    applyTheme(savedTheme);
+} else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const defaultTheme = prefersDark ? 'dark-theme' : 'light-theme';
+    applyTheme(defaultTheme);
+}
+
+themeBtn.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+});
+
+// themeBtnObserver
+const themeBtnObserver = new MutationObserver(() => {
+    const isDark = body.classList.contains('dark-theme');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+    themeBtn.setAttribute('aria-pressed', isDark);
+});
+
+themeBtnObserver.observe(body, {
+    attributes: true,
+    attributeFilter: ['class']
 });
 
 // Links
