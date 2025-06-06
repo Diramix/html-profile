@@ -1,3 +1,11 @@
+// Auto dark theme
+// const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// const body = document.body;
+
+// if (prefersDark) {
+//     body.classList.replace('light-theme', 'dark-theme');
+// }
+
 // Waiting for loading
 const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
