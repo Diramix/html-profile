@@ -3,7 +3,7 @@
         display: block;
     }
 
-    .dev-menu {
+    .dev-panel {
         display: block;
     }
 }
@@ -30,10 +30,10 @@
     transition: ease 0.2s;
 }
 
-.dev-menu {
+.dev-panel {
     display: none;
     position: absolute;
-    top: 10px;
+    top: 20vh;
     right: 10px;
     background: var(--topbar-background-color);
     backdrop-filter: blur(var(--main-blur));
@@ -46,13 +46,17 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.dev-menu .title {
+.dev_block:nth-child(2) {
+    margin-top: 10px;
+}
+
+.dev-panel .title {
     font-weight: bold;
     margin-bottom: 8px;
     color: var(--font-color);
 }
 
-.dev-menu button {
+.dev-panel button {
     width: 100%;
     border: none;
     background: transparent;
@@ -64,7 +68,7 @@
     transition: background 0.3s;
 }
 
-.dev-menu button:hover {
+.dev-panel button:hover {
     background: var(--topbar-background-color);
 }
 

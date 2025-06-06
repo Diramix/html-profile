@@ -157,6 +157,10 @@ body {
     text-align: center;
 }
 
+.dev_hidden {
+    display: none;
+}
+
 .background_wrapper {
     background-color: var(--wrapper-color);
     border-radius: 13px;
