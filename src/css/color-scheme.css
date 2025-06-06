@@ -22,6 +22,7 @@
     --favorite-track-text-artist-color: #fff8;
     --separator-color: #fff2;
     --role-background-color: #fff1;
+    --dimmer-control: #0005;
 }
 
 .light-theme {
@@ -43,4 +44,5 @@
     --favorite-track-text-artist-color: #0008;
     --separator-color: #0002;
     --role-background-color: #0001;
+    --dimmer-control: #0000;
 }
