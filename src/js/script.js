@@ -1,10 +1,16 @@
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 // Waiting for loading
 const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
+
 const requiredFiles = [
-    "https://www.dropbox.com/scl/fi/k0mzsi9ktq9chj8tcwsl8/bg.mp4?rlkey=u20frt59aale1awxy75vs33no&st=f61owri8&dl=1",
     "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=51ig99p1&dl=1"
 ];
+
+if (!isMobile) {
+    requiredFiles.push("https://www.dropbox.com/scl/fi/k0mzsi9ktq9chj8tcwsl8/bg.mp4?rlkey=u20frt59aale1awxy75vs33no&st=f61owri8&dl=1");
+}
 
 let loaded = 0;
 
@@ -190,7 +196,7 @@ let isHidden = false;
 let players = new Map();
 
 function hideContainer() {
-    if (isAnyVideoPlaying()) return;
+    if (isMobile || isAnyVideoPlaying()) return;
     mainContainer.style.transition = 'opacity 5s';
     mainContainer.style.opacity = '0';
     isHidden = true;
@@ -205,7 +211,7 @@ function showContainer() {
 }
 
 function resetTimer() {
-    if (isAnyVideoPlaying()) {
+    if (isMobile || isAnyVideoPlaying()) {
         showContainer();
         clearTimeout(timeoutId);
         return;
@@ -229,7 +235,7 @@ document.addEventListener('scroll', resetTimer, { passive: true });
 document.addEventListener('mouseout', (e) => {
     if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
         timeoutId = setTimeout(() => {
-            if (!isAnyVideoPlaying()) {
+            if (!isMobile && !isAnyVideoPlaying()) {
                 hideContainer();
             }
         }, 10000);
@@ -241,8 +247,7 @@ resetTimer();
 function isAnyVideoPlaying() {
     for (const player of players.values()) {
         const state = player.getPlayerState();
-        // Состояния: -1 = unstarted, 0 = ended, 1 = playing, 2 = paused, 3 = buffering, 5 = cued
-        if (state === 1) return true; // playing
+        if (state === 1) return true;
     }
     return false;
 }
