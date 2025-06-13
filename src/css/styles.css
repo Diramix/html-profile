@@ -457,10 +457,18 @@ audio {
     width: 100%;
     max-width: 220px;
     border-radius: 12px;
-    background: #F1F3F4;
     /* box-shadow: 0 3px 10px var(--favorite-track-shadow-color); */
     padding: 6px;
-    filter: invert(var(--favorite-track-invert-filter));
+}
+
+audio {
+    filter: invert(var(--favorite-track-chromium-invert-filter));
+    background: var(--favorite-track-chromium-background);
+}
+
+.gecko audio {
+    filter: invert(var(--favorite-track-gecko-invert-filter));
+    background: var(--favorite-track-gecko-background);
 }
 
 /* Замена баннера */

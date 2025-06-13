@@ -32,6 +32,11 @@ requiredFiles.forEach(src => {
     if (isMedia) element.preload = "auto";
 });
 
+// Gecko check
+if (navigator.userAgent.includes("Gecko") && !navigator.userAgent.includes("WebKit")) {
+    document.documentElement.classList.add("gecko");
+}
+
 // Получение README.md
 const handleReleaseError = () => {
     console.error('Error fetching release data');

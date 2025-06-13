@@ -23,6 +23,10 @@
     --separator-color: #fff2;
     --role-background-color: #fff1;
     --dimmer-control: #0005;
+    --favorite-track-chromium-invert-filter: 100%;
+    --favorite-track-gecko-invert-filter: 0%;
+    --favorite-track-chromium-background: #F1F3F4;
+    --favorite-track-gecko-background: #1A1A1A;
 }
 
 .light-theme {
@@ -39,10 +43,13 @@
     --tooltip-background-color: #F2EEFF;
     --scroll-background-color: #A391A1;
     --scroll-background-color-hovered: #685c66;
-    --favorite-track-invert-filter: 0%;
     --favorite-track-shadow-color: #16181E;
     --favorite-track-text-artist-color: #0008;
     --separator-color: #0002;
     --role-background-color: #0001;
     --dimmer-control: #0000;
+    --favorite-track-chromium-invert-filter: 0%;
+    --favorite-track-gecko-invert-filter: 100%;
+    --favorite-track-chromium-background: #F1F3F4;
+    --favorite-track-gecko-background: #1C1C1C;
 }
