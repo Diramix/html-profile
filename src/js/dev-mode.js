@@ -62,10 +62,16 @@ function updateIndev() {
       const scrollHeight = document.documentElement.scrollHeight;
       const userAgent = navigator.userAgent.toLowerCase();
       let device = 'Other';
+      let engine = 'Unknown';
 
       if (/windows/.test(userAgent)) device = 'Windows';
       else if (/android/.test(userAgent)) device = 'Android';
       else if (/iphone|ipad|ipod/.test(userAgent)) device = 'iOS';
+
+      if (userAgent.includes('edg/')) engine = 'Chromium (Edge)';
+      else if (userAgent.includes('chrome') && !userAgent.includes('edg/')) engine = 'Chromium';
+      else if (userAgent.includes('firefox')) engine = 'Gecko';
+      else if (userAgent.includes('safari') && !userAgent.includes('chrome')) engine = 'WebKit';
 
       const theme = document.body.classList.contains('dark-theme') ? 'Dark' : 'Light';
 
@@ -79,6 +85,7 @@ function updateIndev() {
             `Domain: ${domain}\n` +
             `Date: ${dateStr}\n` +
             `OS: ${device}\n` +
+            `Engine: ${engine}\n` +
             `Theme: ${theme}\n` +
             `Screen: ${screenWidth}x${screenHeight}\n` +
             `Page (viewport): ${pageWidth}x${pageHeight}\n` +
