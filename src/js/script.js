@@ -5,11 +5,11 @@ const loader = document.getElementById("loader");
 const loadingWrapper = document.getElementById("loadingWrapper");
 
 const requiredFiles = [
-    "https://www.dropbox.com/scl/fi/oqmaneh4kqgcwzfsjh7od/music.mp3?rlkey=0l9o0gv3d8ln9d0yokma6zo3n&st=51ig99p1&dl=1"
+    "https://github.com/Diramix/html-profile/releases/download/666.void.scream/music.mp3"
 ];
 
 if (!isMobile) {
-    requiredFiles.push("https://www.dropbox.com/scl/fi/k0mzsi9ktq9chj8tcwsl8/bg.mp4?rlkey=u20frt59aale1awxy75vs33no&st=f61owri8&dl=1");
+    requiredFiles.push("https://github.com/Diramix/html-profile/releases/download/666.void.scream/bg.mp4");
 }
 
 let loaded = 0;

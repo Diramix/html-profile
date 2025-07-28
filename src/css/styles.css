@@ -117,7 +117,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     z-index: -2;
     pointer-events: none;
     /* background: linear-gradient(0deg,
@@ -147,8 +147,8 @@ body {
 
 .main_container {
     background: linear-gradient(180deg,
-            #ffe3cd 10%,
-            #f580a0 90%);
+            #c7b8f1 10%,
+            #ed61c2 90%);
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
     padding: 5px;
@@ -263,18 +263,6 @@ body {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.role_color.white {
-    background-color: white;
-}
-
-.role_color.blue {
-    background-color: blue;
-}
-
-.role_color.red {
-    background-color: red;
 }
 
 .dev_container:hover .tooltip {
@@ -472,7 +460,7 @@ audio {
 
 /* Замена баннера */
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
-    content: url("https://cdn.discordapp.com/banners/710580442180485120/0b14ca6cbf7750316f02f7cab9ce4afa.webp?size=1024");
+    content: url("https://cdn.discordapp.com/banners/710580442180485120/6de8e18fbc3f51cedeed0be7c4573794.webp?size=1024");
     border-radius: 5px;
     pointer-events: none;
 }
