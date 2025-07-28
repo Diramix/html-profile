@@ -40,6 +40,10 @@
         box-sizing: inherit;
     }
 
+    .first_button {
+        background-color: #000;
+    }
+
     .main_wrapper {
         display: flex;
         flex-direction: column;
