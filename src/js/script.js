@@ -92,8 +92,10 @@ function showTooltip() {
 
 function hideTooltip() {
     hideTimeout = setTimeout(() => {
-        tooltip.classList.remove('visible');
-    }, 1000);
+        if (!container.matches(':hover') && !tooltip.matches(':hover')) {
+            tooltip.classList.remove('visible');
+        }
+    }, 300);
 }
 
 container.addEventListener('mouseenter', showTooltip);
