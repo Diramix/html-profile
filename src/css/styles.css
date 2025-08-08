@@ -147,8 +147,8 @@ body {
 
 .main_container {
     background: linear-gradient(180deg,
-            #c7b8f1 10%,
-            #ed61c2 90%);
+            #1b016a 10%,
+            #0d012c 90%);
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
     padding: 5px;
@@ -309,7 +309,7 @@ body {
 }
 
 .fav_user:hover {
-    background-color: var(--topbar-button-color-hovered);
+    background-color: var(--tooltip-button-color-hovered);
     cursor: pointer;
 }
 
@@ -515,7 +515,7 @@ audio {
 
 /* Замена баннера */
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
-    content: url("https://cdn.discordapp.com/banners/710580442180485120/6de8e18fbc3f51cedeed0be7c4573794.webp?size=1024");
+    content: url("https://cdn.discordapp.com/banners/710580442180485120/8cf1f58d832403846d9429987183e901.webp?size=1024");
     border-radius: 5px;
     pointer-events: none;
 }
