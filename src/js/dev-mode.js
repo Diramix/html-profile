@@ -33,14 +33,6 @@ const buttons = [
             }
       },
       {
-            id: 'toggleNextButtons',
-            onClick: () => {
-                  const topbarControls = document.querySelector('.topbar-controls');
-                  topbarControls.classList.toggle('Experiments');
-                  topbarControls.classList.toggle('next_buttons');
-            }
-      },
-      {
             id: 'toggleMainContainerVisible',
             onClick: () => {
                   const mainContainer = document.querySelector('.main_container');

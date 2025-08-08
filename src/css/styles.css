@@ -58,8 +58,7 @@ body {
     gap: 15px;
 }
 
-.topbar-links,
-.topbar-buttons {
+.topbar-links {
     display: flex;
     gap: 15px;
     align-items: center;
@@ -78,36 +77,7 @@ body {
     text-decoration: underline;
 }
 
-.topbar-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--font-color);
-    border-radius: 5px;
-    border: none;
-    background-color: var(--topbar-button-color);
-    width: 80px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.topbar-button:hover {
-    background-color: var(--topbar-button-color-hovered);
-}
-
-.Experiments .topbar-button {
-    display: none;
-}
-
 .Experiments .topbar-link {
-    display: inline-flex;
-}
-
-.next_buttons .topbar-link {
-    display: none;
-}
-
-.next_buttons .topbar-button {
     display: inline-flex;
 }
 

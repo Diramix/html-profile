@@ -9,7 +9,6 @@ const links = [
 ];
 
 const linksContainer = document.getElementById("topbarLinks");
-const buttonsContainer = document.getElementById("topbarButtons");
 const mobileContainer = document.getElementById("mobileLinks");
 
 links.forEach((link, index) => {
@@ -19,12 +18,6 @@ links.forEach((link, index) => {
     a.className = "topbar-link";
     a.textContent = link.name;
     linksContainer.appendChild(a);
-
-    const btn = document.createElement("button");
-    btn.className = "topbar-button";
-    btn.textContent = link.name;
-    btn.addEventListener("click", () => window.open(link.url, "_blank"));
-    buttonsContainer.appendChild(btn);
 
     const aMobile = document.createElement("a");
     aMobile.href = link.url;
