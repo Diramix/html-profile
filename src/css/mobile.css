@@ -127,14 +127,27 @@
     border-radius: 10px;
     align-items: center;
     width: 100%;
+    gap: 10px;
 }
 
 #mobileLinks .mobile-link {
-    padding: 20px;
+    padding: 10px;
     color: var(--font-color);
     text-decoration: none;
     font-weight: 600;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#mobileLinks .mobile-link svg {
+    width: 20px;
+    height: 20px;
+    /* fill: currentColor; */
+    position: absolute;
+    left: 10px;
 }
 
 #mobileLinks .separator {
@@ -143,12 +156,47 @@
     width: 100%;
 }
 
+/* #mobileLinks svg {
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 3px;
+} */
+
+#mobileLinks .mobile-link:nth-child(1) svg path {
+    fill: #d51007; /* Last.fm red */
+}
+
+#mobileLinks .mobile-link:nth-child(3) svg path {
+    fill: #bd081c; /* Pinterest red */
+}
+
+#mobileLinks .mobile-link:nth-child(5) svg path {
+    fill: #fff; /* Twitter blue */
+}
+
+#mobileLinks .mobile-link:nth-child(7) svg path {
+    fill: #5865f2; /* Discord blurple */
+}
+
+#mobileLinks .mobile-link:nth-child(9) svg path {
+    fill: #ff7900; /* Boosty orange */
+}
+
+#mobileLinks .mobile-link:nth-child(11) svg path {
+    fill: #fff; /* GitHub black */
+}
+
+#mobileLinks .mobile-link:nth-child(13) svg path {
+    fill: #1db954; /* Spotify green */
+}
+
 /* mobile block title */
 .mobile_block_title {
     position: sticky;
     font-size: 12px;
     font-weight: 600;
     width: 100%;
+    margin-bottom: 10px;
     /* padding: 10px 0 0 13px; */
     color: var(--font-color);
 }

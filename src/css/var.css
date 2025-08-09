@@ -1,11 +1,12 @@
 :root {
-    --main-blur: 30px;
+    --main-blur: 0px;
     --main-brightness: 0.5;
+    --topbar-height: 48px;
 }
 
 .dark-theme {
     --topbar-background-color: #0D0D0D90;
-    --topbar-button-color: #0D0D0D90;
+    --topbar-button-color: #fff2;
     --topbar-button-color-hovered: #3b424d;
     --background-dark: #0D0D0D;
     --background-changelog: #1E2027;
@@ -32,7 +33,7 @@
 
 .light-theme {
     --topbar-background-color: #E5DEF890;
-    --topbar-button-color: #E5DEF890;
+    --topbar-button-color: #0002;
     --topbar-button-color-hovered: #c9c1df;
     --background-dark: #0D0D0D;
     --background-changelog: #1E2027;
