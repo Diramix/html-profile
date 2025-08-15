@@ -1,9 +1,17 @@
 function handleFirstButtonClick() {
+    // Starting bg video
     const bgVideo = document.getElementById('background-video');
     if (bgVideo) bgVideo.play();
 
-    document.getElementById('apngStart').src = 'https://cdn.discordapp.com/assets/profile_effects/effects/2025-08-06/kawaii_clouds/intro.png';
+    // Profile Decoration
+    const profileDecoration = document.getElementById('apngStart');
+    profileDecoration.src = './src/assets/intro.png';
 
+    setTimeout(() => {
+        profileDecoration.src = './src/assets/idle.png';
+    }, 3200);
+
+    // Showing controls
     const fb_container = document.getElementById('fb_container');
     fb_container.style.opacity = '0';
     fb_container.style.pointerEvents = 'none';
