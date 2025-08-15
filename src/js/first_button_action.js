@@ -2,7 +2,7 @@ function handleFirstButtonClick() {
     const bgVideo = document.getElementById('background-video');
     if (bgVideo) bgVideo.play();
 
-    // document.getElementById('apngStart').src = 'src/assets/intro3.png';
+    document.getElementById('apngStart').src = 'https://cdn.discordapp.com/assets/profile_effects/effects/2025-08-06/kawaii_clouds/intro.png';
 
     const fb_container = document.getElementById('fb_container');
     fb_container.style.opacity = '0';
