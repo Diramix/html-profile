@@ -484,7 +484,7 @@ audio {
 
 /* Замена баннера */
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
-    content: url("https://cdn.discordapp.com/banners/710580442180485120/8cf1f58d832403846d9429987183e901.webp?size=1024");
+    content: url("https://cdn.discordapp.com/banners/710580442180485120/2e7f8d449f481eb2295b964548a3adef.webp?size=1024");
     border-radius: 5px;
     pointer-events: none;
 }
