@@ -199,7 +199,7 @@ body {
 
 .tooltip {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     opacity: 0;
     background-color: var(--tooltip-background-color);
     color: var(--font-color);
@@ -207,16 +207,15 @@ body {
     border-radius: 12px;
     padding: 6px;
     position: absolute;
-    bottom: -268px;
     left: 50%;
-    transform: translateX(-50%);
-    transition: opacity 0.3s;
+    top: 100%;
+    transform: translateX(-50%) translateY(8px);
+    transition: opacity 0.3s, transform 0.3s;
     white-space: nowrap;
     z-index: 11;
     gap: 8px;
     pointer-events: none;
     visibility: hidden;
-    flex-direction: column;
 }
 
 .tooltip.visible {
