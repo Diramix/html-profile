@@ -295,24 +295,24 @@ body {
 }
 
 .fav_user_nickname {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .badge {
-  width: 15px;
-  height: 15px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 0;
-  margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto 0;
+    margin-right: 3px;
 }
 
 .badge.discord {
-  background-image: url('https://i.postimg.cc/2yb6DBg4/discord.png');
+    background-image: url('https://i.postimg.cc/2yb6DBg4/discord.png');
 }
 
 .badge.telegram {
-  background-image: url('https://i.postimg.cc/d3b0tVKg/telegram.png');
+    background-image: url('https://i.postimg.cc/d3b0tVKg/telegram.png');
 }
 
 .dev_details {
