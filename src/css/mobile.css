@@ -44,14 +44,14 @@
         background-color: #000;
     }
 
-    .main_wrapper {
+    .page_wrapper {
         display: flex;
         flex-direction: column;
         height: 100%;
         overflow: hidden;
     }
 
-    .main_container {
+    .profile_container {
         background-color: transparent;
         padding: 0;
         height: 100%;
@@ -72,8 +72,8 @@
         flex-direction: column;
     }
 
-    .main_title,
-    .links_main_title {
+    .profile_title,
+    .links_profile_title {
         display: none;
     }
 
@@ -109,7 +109,7 @@
         display: none;
     }
 
-    .changelog {
+    .profile_content {
         justify-content: center;
         height: 100%;
         overflow-y: auto;
@@ -163,31 +163,38 @@
 } */
 
 #mobileLinks .mobile-link:nth-child(1) svg path {
-    fill: #d51007; /* Last.fm red */
+    fill: #d51007;
+    /* Last.fm red */
 }
 
 #mobileLinks .mobile-link:nth-child(3) svg path {
-    fill: #E60023; /* Pinterest red */
+    fill: #E60023;
+    /* Pinterest red */
 }
 
 #mobileLinks .mobile-link:nth-child(5) svg path {
-    fill: #fff; /* Twitter blue */
+    fill: #fff;
+    /* Twitter blue */
 }
 
 #mobileLinks .mobile-link:nth-child(7) svg path {
-    fill: #5865f2; /* Discord blurple */
+    fill: #5865f2;
+    /* Discord blurple */
 }
 
 #mobileLinks .mobile-link:nth-child(9) svg path {
-    fill: #ff7900; /* Boosty orange */
+    fill: #ff7900;
+    /* Boosty orange */
 }
 
 #mobileLinks .mobile-link:nth-child(11) svg path {
-    fill: #fff; /* GitHub black */
+    fill: #fff;
+    /* GitHub black */
 }
 
 #mobileLinks .mobile-link:nth-child(13) svg path {
-    fill: #1db954; /* Spotify green */
+    fill: #1db954;
+    /* Spotify green */
 }
 
 /* mobile block title */

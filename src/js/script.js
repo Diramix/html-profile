@@ -217,8 +217,8 @@ function updateTitle() {
     setTimeout(updateTitle, 300);
 }
 
-// Fading main_container
-let mainContainer = document.querySelector('.main_container');
+// Fading profile_container
+let mainContainer = document.querySelector('.profile_container');
 let timeoutId;
 let isHidden = false;
 let players = new Map();

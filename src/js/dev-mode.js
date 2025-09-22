@@ -35,7 +35,7 @@ const buttons = [
       {
             id: 'toggleMainContainerVisible',
             onClick: () => {
-                  const mainContainer = document.querySelector('.main_container');
+                  const mainContainer = document.querySelector('.profile_container');
                   mainContainer.classList.toggle('dev_visible');
                   mainContainer.classList.toggle('dev_hidden');
             }
