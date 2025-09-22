@@ -211,7 +211,7 @@ body {
     top: 100%;
     transform: translateX(-50%) translateY(8px);
     transition: opacity 0.3s, transform 0.3s;
-    white-space: nowrap;
+    white-space: normal;
     z-index: 11;
     gap: 8px;
     pointer-events: none;
@@ -261,10 +261,11 @@ body {
 
 .fav_user_container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--role-background-color);
     padding: 5px;
     border-radius: 10px;
-    flex-direction: column;
     gap: 2px;
 }
 
@@ -291,6 +292,27 @@ body {
 .fav_user .fav_user_nickname {
     text-decoration: none !important;
     color: var(--font-color);
+}
+
+.fav_user_nickname {
+  flex-grow: 1;
+}
+
+.badge {
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 0;
+  margin-right: 3px;
+}
+
+.badge.discord {
+  background-image: url('https://i.postimg.cc/2yb6DBg4/discord.png');
+}
+
+.badge.telegram {
+  background-image: url('https://i.postimg.cc/d3b0tVKg/telegram.png');
 }
 
 .dev_details {
