@@ -4,12 +4,12 @@ function handleFirstButtonClick() {
     if (bgVideo) bgVideo.play();
 
     // Profile Decoration
-    // const profileDecoration = document.getElementById('apngStart');
-    // profileDecoration.src = './src/assets/intro.png';
+    const profileDecoration = document.getElementById('apngStart');
+    profileDecoration.src = './src/assets/intro.png';
 
-    // setTimeout(() => {
-    //     profileDecoration.src = './src/assets/idle.png';
-    // }, 3200);
+    setTimeout(() => {
+        profileDecoration.src = './src/assets/idle.png';
+    }, 3200);
 
     // Showing controls
     const fb_container = document.getElementById('fb_container');
