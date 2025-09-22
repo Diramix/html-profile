@@ -364,6 +364,10 @@ body {
     margin-top: 5px;
 }
 
+.emoji_status img {
+    vertical-align: middle;
+}
+
 .simple_block {
     padding: 15px;
     background-color: var(--simple-block-background-color);
