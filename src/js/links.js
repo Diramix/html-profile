@@ -15,14 +15,14 @@ links.forEach((link, index) => {
     const a = document.createElement("a");
     a.href = link.url;
     a.target = "_blank";
-    a.className = "topbar-link";
+    a.className = "topbar_link";
     a.textContent = link.name;
     linksContainer.appendChild(a);
 
     const aMobile = document.createElement("a");
     aMobile.href = link.url;
     aMobile.target = "_blank";
-    aMobile.className = "mobile-link";
+    aMobile.className = "mobile_link";
     aMobile.textContent = link.name;
     mobileContainer.appendChild(aMobile);
 

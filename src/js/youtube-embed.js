@@ -23,7 +23,7 @@ const youtubeEmbedObserver = new MutationObserver(mutations => {
                 if (videoId) {
                     const iframe = document.createElement("iframe");
                     iframe.src = "https://www.youtube.com/embed/" + videoId + "?enablejsapi=1";
-                    iframe.className = "youtube-embed";
+                    iframe.className = "youtube_embed";
                     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
                     iframe.allowFullscreen = true;
 

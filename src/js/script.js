@@ -294,7 +294,7 @@ function loadYouTubeAPI(callback) {
 }
 
 function setupPlayers() {
-    document.querySelectorAll('iframe.youtube-embed').forEach((iframe) => {
+    document.querySelectorAll('iframe.youtube_embed').forEach((iframe) => {
         if (!players.has(iframe)) {
             const player = new YT.Player(iframe, {
                 events: {

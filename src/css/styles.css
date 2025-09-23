@@ -49,7 +49,7 @@ body {
     margin-left: 20px;
 }
 
-.topbar-controls {
+.topbar_controls {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -58,13 +58,13 @@ body {
     gap: 15px;
 }
 
-.topbar-links {
+.topbar_links {
     display: flex;
     gap: 0px;
     align-items: center;
 }
 
-.topbar-link {
+.topbar_link {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -76,7 +76,7 @@ body {
     border-radius: 50%;
 }
 
-.topbar-link:hover {
+.topbar_link:hover {
     background-color: var(--topbar-button-color-hovered);
 }
 
@@ -334,7 +334,7 @@ body {
     padding: 5px;
 }
 
-.avatar-frame {
+.avatar_frame {
     position: absolute;
     top: 0;
     left: 0;
@@ -452,7 +452,7 @@ iframe {
     border-radius: 10px;
 }
 
-.track-card {
+.track_card {
     width: 220px;
     height: 290px;
     border: 0 solid;
@@ -465,7 +465,7 @@ iframe {
     align-items: center;
 }
 
-.track-cover {
+.track_cover {
     height: 150px;
     object-fit: contain;
     border-radius: 8px;
@@ -473,7 +473,7 @@ iframe {
     pointer-events: none;
 }
 
-.track-title {
+.track_title {
     margin: 10px 0 5px;
     font-size: 16px;
     text-align: center;
@@ -484,7 +484,7 @@ iframe {
     width: 100%;
 }
 
-.track-artist {
+.track_artist {
     margin: 0 0 10px;
     font-size: 14px;
     color: var(--favorite-track-text-artist-color);
