@@ -47,9 +47,9 @@ const handleReleaseError = () => {
         descriptionElement.style.color = 'red';
     }
 
-    const body2Element = document.querySelector('.body2');
-    if (body2Element) {
-        body2Element.style.background = 'linear-gradient(180deg, #F00 0%, #000d1a 100%)';
+    const background_videoElement = document.querySelector('.background_video');
+    if (background_videoElement) {
+        background_videoElement.style.background = 'linear-gradient(180deg, #F00 0%, #000d1a 100%)';
     }
 
     const latestElements = document.querySelectorAll('#ab_latest');
@@ -107,7 +107,7 @@ btn.addEventListener('click', () => {
 })
 
 // Fade Volume
-let mediaElements = document.querySelectorAll('.track-audio, .body2');
+let mediaElements = document.querySelectorAll('.track-audio, .background_video');
 
 mediaElements.forEach(media => {
     media.fadeInInterval = null;

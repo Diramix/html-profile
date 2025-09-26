@@ -364,13 +364,13 @@ body {
     transform: rotate(180deg);
 }
 
-.dev_details {
+.member_details {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.dev_details * {
+.member_details * {
     margin: -5px 0 -5px 0;
 }
 
