@@ -39,6 +39,14 @@ const buttons = [
                   mainContainer.classList.toggle('dev_visible');
                   mainContainer.classList.toggle('dev_hidden');
             }
+      },
+      {
+            id: 'toggleUserProfileModalContrast',
+            onClick: () => {
+                  const tooltip_wrapper = document.querySelector('.tooltip_wrapper');
+                  const currentColor = getComputedStyle(tooltip_wrapper).backgroundColor;
+                  tooltip_wrapper.style.backgroundColor = currentColor === 'rgba(0, 0, 0, 0)' ? '#f002' : 'rgba(0, 0, 0, 0)';
+            }
       }
 ];
 
