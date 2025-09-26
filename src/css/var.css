@@ -15,8 +15,8 @@
     --wrapper-color: rgba(0, 0, 0, 0.8);
     --simple-block-background-color: #fff1;
     --dev-description-text-color: #D5D1E7;
-    --tooltip-background-color: #000000;
-    --tooltip-button-color-hovered: #fff1;
+    --upm-background-color: #000000;
+    --upm-button-color-hovered: #fff1;
     --scroll-background-color: #615762;
     --scroll-background-color-hovered: #998a9b;
     --favorite-track-invert-filter: 100%;
@@ -42,8 +42,8 @@
     --wrapper-color: #fff8;
     --simple-block-background-color: #fff5;
     --dev-description-text-color: #5F606A;
-    --tooltip-background-color: #FFFFFF;
-    --tooltip-button-color-hovered: #0001;
+    --upm-background-color: #FFFFFF;
+    --upm-button-color-hovered: #0001;
     --scroll-background-color: #A391A1;
     --scroll-background-color-hovered: #685c66;
     --favorite-track-shadow-color: #16181E;

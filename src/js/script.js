@@ -80,14 +80,14 @@ const updateDescription = (description) => {
 
 fetchReleaseData();
 
-// tooltip
-const dev = document.querySelector('.dev_container')
-const tooltipWrapper = document.querySelector('.tooltip_wrapper')
-const tooltip = document.querySelector('.tooltip')
+// upm
+const dev = document.querySelector('.member')
+const upmWrapper = document.querySelector('.upm_wrapper')
+const upm = document.querySelector('.upm')
 
 dev.addEventListener('click', () => {
-    tooltipWrapper.style.display = tooltipWrapper.style.display === 'none' ? 'flex' : 'none'
-    tooltip.style.display = tooltip.style.display === 'none' ? 'flex' : 'none'
+    upmWrapper.style.display = upmWrapper.style.display === 'none' ? 'flex' : 'none'
+    upm.style.display = upm.style.display === 'none' ? 'flex' : 'none'
 })
 
 // Fade Volume

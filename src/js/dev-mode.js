@@ -43,9 +43,9 @@ const buttons = [
       {
             id: 'toggleUserProfileModalContrast',
             onClick: () => {
-                  const tooltip_wrapper = document.querySelector('.tooltip_wrapper');
-                  const currentColor = getComputedStyle(tooltip_wrapper).backgroundColor;
-                  tooltip_wrapper.style.backgroundColor = currentColor === 'rgba(0, 0, 0, 0)' ? '#f002' : 'rgba(0, 0, 0, 0)';
+                  const upm_wrapper = document.querySelector('.upm_wrapper');
+                  const currentColor = getComputedStyle(upm_wrapper).backgroundColor;
+                  upm_wrapper.style.backgroundColor = currentColor === 'rgba(0, 0, 0, 0)' ? '#f002' : 'rgba(0, 0, 0, 0)';
             }
       }
 ];

@@ -172,7 +172,7 @@ body {
     row-gap: 15px;
 }
 
-.dev_container {
+.member {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -181,7 +181,7 @@ body {
     width: 100%;
 }
 
-.dev_container:hover {
+.member:hover {
     background-color: #fff1;
     cursor: pointer;
 }
@@ -202,7 +202,7 @@ body {
     border-radius: 10px;
 }
 
-.tooltip_wrapper {
+.upm_wrapper {
     position: fixed;
     left: 0;
     top: 0;
@@ -212,10 +212,10 @@ body {
     cursor: default;
 }
 
-.tooltip {
+.upm {
     display: flex;
     flex-direction: column;
-    background-color: var(--tooltip-background-color);
+    background-color: var(--upm-background-color);
     color: var(--font-color);
     text-align: center;
     border-radius: 12px;
@@ -231,13 +231,13 @@ body {
     cursor: default;
 }
 
-.tooltip.visible {
+.upm.visible {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-.tooltip_title {
+.upm_title {
     font-size: 16px;
     font-weight: 600;
 }
@@ -266,7 +266,7 @@ body {
     margin-bottom: auto;
 }
 
-.fav_users_tooltip {
+.fav_users_upm {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -292,7 +292,7 @@ body {
 }
 
 .fav_user:hover {
-    background-color: var(--tooltip-button-color-hovered);
+    background-color: var(--upm-button-color-hovered);
     cursor: pointer;
 }
 
