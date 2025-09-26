@@ -181,6 +181,11 @@ body {
     width: 100%;
 }
 
+.dev_container:hover {
+    background-color: #fff1;
+    cursor: pointer;
+}
+
 .nameplated {
     position: absolute;
     height: 100%;
@@ -204,6 +209,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 11;
+    cursor: default;
 }
 
 .tooltip {
@@ -222,6 +228,7 @@ body {
     white-space: normal;
     z-index: 12;
     gap: 8px;
+    cursor: default;
 }
 
 .tooltip.visible {
