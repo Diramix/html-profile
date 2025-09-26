@@ -395,6 +395,11 @@ body {
     position: relative;
 }
 
+.profile_content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 .profile_content button {
     display: block;
     width: 100%;
