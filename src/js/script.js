@@ -81,27 +81,14 @@ const updateDescription = (description) => {
 fetchReleaseData();
 
 // tooltip
-const container = document.querySelector('.dev_container');
-const tooltip = container.querySelector('.tooltip');
-let hideTimeout;
+const dev = document.querySelector('.dev_container')
+const tooltipWrapper = document.querySelector('.tooltip_wrapper')
+const tooltip = document.querySelector('.tooltip')
 
-function showTooltip() {
-    clearTimeout(hideTimeout);
-    tooltip.classList.add('visible');
-}
-
-function hideTooltip() {
-    hideTimeout = setTimeout(() => {
-        if (!container.matches(':hover') && !tooltip.matches(':hover')) {
-            tooltip.classList.remove('visible');
-        }
-    }, 300);
-}
-
-container.addEventListener('mouseenter', showTooltip);
-container.addEventListener('mouseleave', hideTooltip);
-tooltip.addEventListener('mouseenter', showTooltip);
-tooltip.addEventListener('mouseleave', hideTooltip);
+dev.addEventListener('click', () => {
+    tooltipWrapper.style.display = tooltipWrapper.style.display === 'none' ? 'flex' : 'none'
+    tooltip.style.display = tooltip.style.display === 'none' ? 'flex' : 'none'
+})
 
 // Fade Volume
 let mediaElements = document.querySelectorAll('.track-audio, .body2');
