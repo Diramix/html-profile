@@ -395,11 +395,6 @@ body {
     position: relative;
 }
 
-.profile_content {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
 .profile_content button {
     display: block;
     width: 100%;
@@ -416,7 +411,8 @@ body {
 }
 
 .description p {
-    margin-bottom: 15px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .description ul {
