@@ -85,9 +85,25 @@ const dev = document.querySelector('.member')
 const upmWrapper = document.querySelector('.upm_wrapper')
 const upm = document.querySelector('.upm')
 
-dev.addEventListener('click', () => {
-    upmWrapper.style.display = upmWrapper.style.display === 'none' ? 'flex' : 'none'
-    upm.style.display = upm.style.display === 'none' ? 'flex' : 'none'
+dev.addEventListener('click', (e) => {
+    if (upmWrapper.style.display === 'flex') {
+        if (e.target === upmWrapper) {
+            upmWrapper.style.display = 'none'
+            upm.style.display = 'none'
+        }
+    } else {
+        upmWrapper.style.display = 'flex'
+        upm.style.display = 'flex'
+    }
+})
+
+// Expand button
+const btn = document.querySelector('.expand_button')
+const fav = document.querySelector('.fav_user_container')
+
+btn.addEventListener('click', () => {
+    fav.classList.toggle('active')
+    btn.querySelector('.arrow').classList.toggle('rotated')
 })
 
 // Fade Volume

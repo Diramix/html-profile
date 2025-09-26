@@ -17,6 +17,7 @@
     --dev-description-text-color: #D5D1E7;
     --upm-background-color: #000000;
     --upm-button-color-hovered: #fff1;
+    --expand-button-hover: #212121;
     --scroll-background-color: #615762;
     --scroll-background-color-hovered: #998a9b;
     --favorite-track-invert-filter: 100%;
@@ -44,6 +45,7 @@
     --dev-description-text-color: #5F606A;
     --upm-background-color: #FFFFFF;
     --upm-button-color-hovered: #0001;
+    --expand-button-hover: #DEDEDE;
     --scroll-background-color: #A391A1;
     --scroll-background-color-hovered: #685c66;
     --favorite-track-shadow-color: #16181E;

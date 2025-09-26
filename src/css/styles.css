@@ -283,6 +283,10 @@ body {
     overflow-y: auto;
 }
 
+.fav_user_container.active {
+    height: 100%;
+}
+
 .fav_user {
     display: flex;
     flex-direction: row;
@@ -327,6 +331,37 @@ body {
 
 .badge.telegram {
     background-image: url('https://i.postimg.cc/d3b0tVKg/telegram.png');
+}
+
+.expand_button {
+    height: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: var(--role-background-color);
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fav_user_container.active {
+    max-height: 100vh;
+}
+
+.fav_user_container.active+.expand_button .arrow {
+    transform: rotate(180deg);
+}
+
+.expand_button:hover {
+    background-color: var(--expand-button-hover);
+}
+
+.arrow path {
+    fill: var(--font-color);
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
 }
 
 .dev_details {
