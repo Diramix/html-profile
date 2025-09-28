@@ -369,7 +369,7 @@ themeBtnObserver.observe(body, {
 });
 
 // fav track parser
-const jsonUrl = 'https://github.com/Diramix/html-profile/releases/download/666.void.scream/fav-track.json';
+const jsonUrl = 'https://pub-b9875226ee8b4da89fd1c0896b88d59f.r2.dev/fav-track.json';
 
 fetch(jsonUrl)
     .then(response => response.json())
