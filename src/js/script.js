@@ -367,3 +367,19 @@ themeBtnObserver.observe(body, {
     attributes: true,
     attributeFilter: ['class']
 });
+
+// fav track parser
+const jsonUrl = 'https://github.com/Diramix/html-profile/releases/download/666.void.scream/fav-track.json';
+
+fetch(jsonUrl)
+    .then(response => response.json())
+    .then(track => {
+        const container = document.querySelector('.track_card');
+        container.querySelector('.track_cover').src = track.cover;
+        container.querySelector('.track_title').textContent = track.title;
+        container.querySelector('.track_artist').textContent = track.artist;
+        container.querySelector('audio source').src = track.audio;
+        container.querySelector('audio').load();
+        container.querySelector('.track_card_bg').style.backgroundImage = `url(${track.cover})`;
+    })
+    .catch(err => console.error(err));

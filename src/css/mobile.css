@@ -93,7 +93,6 @@
     .track_card_bg {
         position: absolute;
         inset: 0;
-        background-image: url("https://i.scdn.co/image/ab67616d0000b273be363b1e9e4fd60552123d7a");
         background-size: cover;
         background-position: center;
         filter: blur(10px) brightness(0.7);

@@ -83,23 +83,22 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="src/css/dev-mode.css">
-	<link rel="stylesheet" href="src/css/loading.css">
-	<link rel="stylesheet" href="src/css/fb.css">
-	<link rel="stylesheet" href="src/css/styles.css">
+	<link rel="stylesheet" href="src/css/start.css">
+	<link rel="stylesheet" href="src/css/page.css">
 	<link rel="stylesheet" href="src/css/mobile.css">
 	<link rel="stylesheet" href="src/css/var.css">
-	<link rel="stylesheet" href="src/css/widescreen.css">
 	<link rel="stylesheet" href="src/css/youtube_embed.css">
 
 	<!-- Scripts -->
-	<!-- <script src="src/js/links.js" async defer></script> -->
 	<script src="src/js/dev-mode.js" async defer></script>
 	<script src="src/js/youtube_embed.js" async defer></script>
 	<script src="src/js/script.js" async defer></script>
 </head>
 
 <body class="light-theme">
+
 	<div class="indev"></div>
+
 	<div class="loading_wrapper" id="loadingWrapper">
 		<div id="loader">Loading: 0%</div>
 		<img src="src/assets/loading.gif" class="desktop loading_gif">
@@ -113,11 +112,14 @@
 		<img src="src/assets/thumbnail.png" class="desktop loading_thumbnail">
 		<script src="src/js/first_button_action.js"></script>
 	</div>
+
 	<div id="dev-bg-cover"></div>
+
 	<video class="desktop background_video" id="background-video" disablePictureInPicture loop playsinline
 		preload="metadata">
 		<source src="https://github.com/Diramix/html-profile/releases/download/666.void.scream/bg.mp4" type="video/mp4">
 	</video>
+
 	<div class="hidden_control">
 		<div class="desktop topbar_wrapper">
 			<div class="topbar">
@@ -197,9 +199,6 @@
 					<button id="toggleMainContainerVisible">Dev Hidden</button>
 					<button id="toggleUserProfileModalContrast">Contrast UPM</button>
 				</div>
-				<!-- <div class="dev_block">
-					<div class="title">Experiments</div>
-				</div> -->
 			</div>
 			<div class="dev_visible dark-theme profile_container">
 				<div class="background_wrapper">
@@ -302,16 +301,13 @@
 							<div class="mini_title">Pinned track</div>
 							<div class="simple_block track_card">
 								<div class="track_card_bg"></div>
-								<img class="track_cover"
-									src="https://i.scdn.co/image/ab67616d0000b273be363b1e9e4fd60552123d7a" alt="Cover">
+								<img class="track_cover" alt="Cover">
 								<div class="track_info">
-									<h3 class="track_title">Плохая девочка</h3>
-									<p class="track_artist">Vintage</p>
+									<h3 class="track_title"></h3>
+									<p class="track_artist"></p>
 								</div>
 								<audio controls class="track-audio">
-									<source
-										src="https://github.com/Diramix/html-profile/releases/download/666.void.scream/music.mp3"
-										type="audio/mpeg">
+									<source type="audio/mpeg">
 									Your browser does not support audio.
 								</audio>
 							</div>

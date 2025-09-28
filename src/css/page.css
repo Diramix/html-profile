@@ -39,6 +39,16 @@ body {
     align-items: center;
 }
 
+@media (min-width: 1601px) {
+    .topbar {
+        width: 1600px;
+        align-items: center;
+        border-radius: 10px;
+        top: 10px;
+        border-width: 0;
+    }
+}
+
 .links_profile_title {
     color: var(--font-color);
     font-size: 25px;
