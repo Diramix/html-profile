@@ -369,17 +369,27 @@ themeBtnObserver.observe(body, {
 });
 
 // fav track parser
-const jsonUrl = 'https://pub-b9875226ee8b4da89fd1c0896b88d59f.r2.dev/fav-track.json';
+async function fetchJson() {
+    const jsonUrl = 'https://pub-b9875226ee8b4da89fd1c0896b88d59f.r2.dev/fav-track.jsn';
+    try {
+        const response = await fetch(jsonUrl);
+        if (!response.ok) throw new Error('Link unavailable');
+        console.log('Fetched from remote URL');
+        return await response.json();
+    } catch (e) {
+        console.log('Using fallback JSON');
+        const response = await fetch('src/assets/track/metadata-fallback.json');
+        if (!response.ok) throw new Error('Fallback not found');
+        return await response.json();
+    }
+}
 
-fetch(jsonUrl)
-    .then(response => response.json())
-    .then(track => {
-        const container = document.querySelector('.track_card');
-        container.querySelector('.track_cover').src = track.cover;
-        container.querySelector('.track_title').textContent = track.title;
-        container.querySelector('.track_artist').textContent = track.artist;
-        container.querySelector('audio source').src = track.audio;
-        container.querySelector('audio').load();
-        container.querySelector('.track_card_bg').style.backgroundImage = `url(${track.cover})`;
-    })
-    .catch(err => console.error(err));
+fetchJson().then(track => {
+    const container = document.querySelector('.track_card');
+    container.querySelector('.track_cover').src = track.cover;
+    container.querySelector('.track_title').textContent = track.title;
+    container.querySelector('.track_artist').textContent = track.artist;
+    container.querySelector('audio source').src = track.audio;
+    container.querySelector('audio').load();
+    container.querySelector('.track_card_bg').style.backgroundImage = `url(${track.cover})`;
+}).catch(err => console.error(err));
