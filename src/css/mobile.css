@@ -93,6 +93,7 @@
     .track_card_bg {
         position: absolute;
         inset: 0;
+        background-image: url("/src/assets/track/cover-fallback.png");
         background-size: cover;
         background-position: center;
         filter: blur(10px) brightness(0.7);

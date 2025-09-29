@@ -373,14 +373,10 @@ async function fetchJson() {
     const jsonUrl = 'https://pub-b9875226ee8b4da89fd1c0896b88d59f.r2.dev/fav-track.json';
     try {
         const response = await fetch(jsonUrl);
-        if (!response.ok) throw new Error('Link unavailable');
-        console.log('Fetched from remote URL');
+        if (!response.ok) return null;
         return await response.json();
-    } catch (e) {
-        console.log('Using fallback JSON');
-        const response = await fetch('src/assets/track/metadata-fallback.json');
-        if (!response.ok) throw new Error('Fallback not found');
-        return await response.json();
+    } catch {
+        return null;
     }
 }
 
