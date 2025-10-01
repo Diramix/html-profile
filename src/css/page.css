@@ -126,8 +126,8 @@ body {
 
 .profile_container {
     background: linear-gradient(180deg,
-            #1b016a 10%,
-            #0d012c 90%);
+            #4c1982 10%,
+            #89146c 90%);
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
     padding: 5px;
@@ -575,7 +575,7 @@ audio {
 
 /* Замена баннера */
 [src^="https://github.com/Diramix/Diramix/blob/main/assets/banner.png?raw=true"] {
-    content: url("https://cdn.discordapp.com/banners/710580442180485120/21e48b600f0b2a981b06e3a4f91f3017.webp?size=1024");
+    content: url("../assets/profile/banner.webp");
     border-radius: 5px;
     pointer-events: none;
 }

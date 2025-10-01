@@ -5,11 +5,11 @@ function handleFirstButtonClick() {
 
     // Profile Decoration
     const profileDecoration = document.getElementById('apngStart');
-    profileDecoration.src = './src/assets/intro.png';
+    profileDecoration.src = './src/assets/profile/intro.png';
 
     setTimeout(() => {
-        profileDecoration.src = './src/assets/idle.png';
-    }, 3200);
+        profileDecoration.src = './src/assets/profile/idle.png';
+    }, 2000);
 
     // Showing controls
     const fb_container = document.getElementById('fb_container');
