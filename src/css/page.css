@@ -548,6 +548,9 @@ iframe {
     font-size: 14px;
     color: var(--favorite-track-text-artist-color);
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 audio::-webkit-media-controls-current-time-display,

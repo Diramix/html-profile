@@ -118,6 +118,7 @@
         backdrop-filter: brightness(0.5);
         border-radius: 10px;
         padding: 0 10px 0 10px;
+        max-width: 150px;
     }
 
     audio {
