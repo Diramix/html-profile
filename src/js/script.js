@@ -370,7 +370,7 @@ themeBtnObserver.observe(body, {
 
 // fav track parser
 async function fetchJson() {
-    const jsonUrl = 'https://pub-b9875226ee8b4da89fd1c0896b88d59f.r2.dev/fav-track.json';
+    const jsonUrl = 'src/assets/fav-track.json';
     try {
         const response = await fetch(jsonUrl);
         if (!response.ok) return null;
