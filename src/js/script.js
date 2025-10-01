@@ -384,7 +384,9 @@ fetchJson().then(track => {
     const container = document.querySelector('.track_card');
     container.querySelector('.track_cover').src = track.cover;
     container.querySelector('.track_title').textContent = track.title;
+    container.querySelector('.activity_title').textContent = track.title;
     container.querySelector('.track_artist').textContent = track.artist;
+    container.querySelector('.activity_artist').textContent = track.artist;
     container.querySelector('audio source').src = track.audio;
     container.querySelector('audio').load();
     container.querySelector('.track_card_bg').style.backgroundImage = `url(${track.cover})`;
