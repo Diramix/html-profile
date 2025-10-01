@@ -524,6 +524,10 @@ iframe {
     align-items: center;
 }
 
+.track_info {
+    display: block !important;
+}
+
 .track_cover {
     height: 150px;
     object-fit: contain;
