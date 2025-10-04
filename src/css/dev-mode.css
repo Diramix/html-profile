@@ -34,7 +34,7 @@
     backdrop-filter: blur(var(--main-blur));
     border-radius: 5px;
     padding: 10px;
-    z-index: 999;
+    z-index: 9999;
     font-family: sans-serif;
     width: 140px;
     text-align: center;

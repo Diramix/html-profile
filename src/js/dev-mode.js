@@ -55,6 +55,18 @@ const buttons = [
                   indev.classList.toggle('dev_visible');
                   indev.classList.toggle('dev_hidden');
             }
+      },
+      {
+            id: 'sendT',
+            onClick: () => {
+                  showToast("Test", "Test message", "src/assets/toast_test_image.gif");
+            }
+      },
+      {
+            id: 'sendTWL',
+            onClick: () => {
+                  showToast("Test", "Test message w/l", "src/assets/toast_test_image.gif", "https://example.com/");
+            }
       }
 ];
 
