@@ -47,6 +47,14 @@ const buttons = [
                   const currentColor = getComputedStyle(upm_wrapper).backgroundColor;
                   upm_wrapper.style.backgroundColor = currentColor === 'rgba(0, 0, 0, 0)' ? '#f002' : 'rgba(0, 0, 0, 0)';
             }
+      },
+      {
+            id: 'toggleIndev',
+            onClick: () => {
+                  const indev = document.querySelector('.indev');
+                  indev.classList.toggle('dev_visible');
+                  indev.classList.toggle('dev_hidden');
+            }
       }
 ];
 

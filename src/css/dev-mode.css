@@ -1,8 +1,4 @@
 .dev-mode {
-    .indev {
-        display: block;
-    }
-
     .dev-panel {
         display: block;
     }
@@ -10,7 +6,6 @@
 
 .indev {
     user-select: text;
-    display: none;
     position: fixed;
     right: 0;
     bottom: 0;
