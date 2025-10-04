@@ -30,6 +30,7 @@
     --favorite-track-gecko-invert-filter: 0%;
     --favorite-track-chromium-background: #F1F3F4;
     --favorite-track-gecko-background: #1A1A1A;
+    --toast-background-color-hovered: #30303090;
 }
 
 .light-theme {
@@ -57,4 +58,5 @@
     --favorite-track-gecko-invert-filter: 100%;
     --favorite-track-chromium-background: #F1F3F4;
     --favorite-track-gecko-background: #1C1C1C;
+    --toast-background-color-hovered: #dbceff90;
 }
