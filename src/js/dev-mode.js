@@ -49,7 +49,7 @@ const buttons = [
             }
       },
       {
-            id: 'toggleIndev',
+            id: 'toggleDevInfo',
             onClick: () => {
                   const indev = document.querySelector('.indev');
                   indev.classList.toggle('dev_visible');
@@ -134,4 +134,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById(id);
             if (btn) btn.addEventListener('click', onClick);
       });
+});
+
+const panel = document.querySelector('.dev-panel');
+let offsetX, offsetY, dragging = false;
+
+panel.addEventListener('mousedown', e => {
+      dragging = true;
+      offsetX = e.clientX - panel.offsetLeft;
+      offsetY = e.clientY - panel.offsetTop;
+      panel.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mouseup', () => {
+      dragging = false;
+      panel.style.cursor = 'grab';
+});
+
+document.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      panel.style.left = e.clientX - offsetX + 'px';
+      panel.style.top = e.clientY - offsetY + 'px';
 });

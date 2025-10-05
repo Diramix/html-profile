@@ -81,11 +81,11 @@ const updateDescription = (description) => {
 fetchReleaseData();
 
 // upm
-const dev = document.querySelector('.member')
+const member = document.querySelector('.member')
 const upmWrapper = document.querySelector('.upm_wrapper')
 const upm = document.querySelector('.upm')
 
-dev.addEventListener('click', (e) => {
+member.addEventListener('click', (e) => {
     if (upmWrapper.style.display === 'flex') {
         if (e.target === upmWrapper) {
             upmWrapper.style.display = 'none'

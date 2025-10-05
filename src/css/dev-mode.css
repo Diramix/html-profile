@@ -1,7 +1,73 @@
 .dev-mode {
     .dev-panel {
-        display: block;
+        display: flex;
     }
+}
+
+.dev-panel {
+    display: none;
+    position: absolute;
+    cursor: grab;
+    top: 20vh;
+    left: 10px;
+    background: var(--upm-background-color);
+    backdrop-filter: blur(var(--main-blur));
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 9999;
+    font-family: sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dev_block {
+    width: 140px;
+}
+
+.dev_panel_title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--font-color);
+}
+
+.dev_buttons_container {
+    background-color: var(--role-background-color);
+    padding: 5px;
+    border-radius: 7px;
+    gap: 8px;
+}
+
+.dev-panel button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--font-color);
+    font-size: 14px;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.dev-panel button:hover {
+    background: var(--upm-button-color-hovered);
+}
+
+#dev-bg-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    pointer-events: none;
+    display: none;
 }
 
 .indev {
@@ -23,61 +89,4 @@
     background-color: #0D0D0D90;
     backdrop-filter: blur(var(--main-blur));
     transition: ease 0.2s;
-}
-
-.dev-panel {
-    display: none;
-    position: absolute;
-    top: 20vh;
-    right: 10px;
-    background: var(--topbar-background-color);
-    backdrop-filter: blur(var(--main-blur));
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 9999;
-    font-family: sans-serif;
-    width: 140px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.dev_block:nth-child(2) {
-    margin-top: 10px;
-}
-
-.dev-panel .title {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--font-color);
-}
-
-.dev-panel button {
-    width: 100%;
-    border: none;
-    background: transparent;
-    color: var(--font-color);
-    font-size: 14px;
-    padding: 6px 8px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.dev-panel button:hover {
-    background: var(--topbar-background-color);
-}
-
-#dev-bg-cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -1;
-    pointer-events: none;
-    display: none;
 }
