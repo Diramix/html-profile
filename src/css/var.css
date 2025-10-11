@@ -14,6 +14,7 @@
     --block-title-font: #48535D;
     --wrapper-color: rgba(0, 0, 0, 0.8);
     --simple-block-background-color: #fff1;
+    --simple-block-background-color-mobile: #0006;
     --dev-description-text-color: #D5D1E7;
     --upm-background-color: #000000;
     --upm-button-color-hovered: #fff1;
@@ -43,6 +44,7 @@
     --block-title-font: #48535D;
     --wrapper-color: #fff8;
     --simple-block-background-color: #fff5;
+    --simple-block-background-color-mobile: #fff1;
     --dev-description-text-color: #5F606A;
     --upm-background-color: #FFFFFF;
     --upm-button-color-hovered: #0001;

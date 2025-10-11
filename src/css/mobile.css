@@ -40,6 +40,11 @@
         box-sizing: inherit;
     }
 
+    .simple_block {
+        border-radius: 15px;
+        background-color: var(--simple-block-background-color-mobile);
+    }
+
     .first_button {
         background-color: #000;
     }
@@ -64,6 +69,7 @@
     }
 
     .background_wrapper {
+        background: #0009;
         padding: 15px !important;
         border-radius: 0;
     }
@@ -158,6 +164,7 @@
     }
 
     audio {
+        display: none;
         width: 100%;
         max-width: 100%;
         height: 50px;
