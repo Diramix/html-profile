@@ -80,6 +80,12 @@ const updateDescription = (description) => {
 
 fetchReleaseData();
 
+// Pin track on iOS
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    const elements = document.querySelectorAll('.notForIOS');
+    elements.forEach(el => el.style.display = 'none');
+}
+
 // upm
 const member = document.querySelector('.member')
 const upmWrapper = document.querySelector('.upm_wrapper')
