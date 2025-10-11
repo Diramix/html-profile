@@ -389,5 +389,5 @@ fetchJson().then(track => {
     container.querySelector('.activity_artist').textContent = track.artist;
     container.querySelector('audio source').src = track.audio;
     container.querySelector('audio').load();
-    container.querySelector('.track_card_bg').style.backgroundImage = `url(${track.cover})`;
+    container.querySelector('.track_cover_mobile').style.backgroundImage = `url(${track.cover})`;
 }).catch(err => console.error(err));

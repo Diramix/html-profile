@@ -81,39 +81,72 @@
         position: relative;
         width: 100%;
         height: auto;
-        padding: 10px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         z-index: 10;
         overflow: hidden;
-        gap: 10px;
+        gap: 15px;
+    }
+
+    .pin_activity {
+        text-align: left;
+        position: sticky;
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+        color: var(--font-color);
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        justify-content: flex-start;
+    }
+
+    .pin_activity svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+
+    .activity_info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
     }
 
     .activity_container {
         display: flex;
-        background-color: #0009;
-        width: 100%;
+        flex-direction: column;
         text-align: left;
-        border-radius: 5px;
-        padding: 3px 5px;
-        flex-direction: row;
-        gap: 3px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         color: var(--font-color);
-        font-weight: 600;
+        gap: 0px;
     }
 
-    .track_card_bg {
-        position: absolute;
-        inset: 0;
+    .track_cover_mobile {
+        width: 65px;
+        height: 65px;
         background-image: url("/src/assets/track/cover-fallback.png");
         background-size: cover;
         background-position: center;
-        filter: blur(10px) brightness(0.7);
-        transform: scale(1.1);
+        border-radius: 7px;
         z-index: -1;
+    }
+
+    .activity_title {
+        font-weight: 600;
+        font-size: 16px;
+        height: 25px;
+    }
+
+    .activity_artist {
+        font-weight: 400;
+        font-size: 14px;
+        height: 20px;
     }
 
     .track_cover {
@@ -127,7 +160,8 @@
     audio {
         width: 100%;
         max-width: 100%;
-        height: 60px;
+        height: 50px;
+        border-radius: 50px;
     }
 
     .profile_content {
@@ -220,6 +254,7 @@
 
 /* mobile block title */
 .mobile_block_title {
+    text-align: left;
     position: sticky;
     font-size: 12px;
     font-weight: 600;
