@@ -9,7 +9,7 @@ const requiredFiles = [
 ];
 
 if (!isMobile) {
-    requiredFiles.push("https://github.com/Diramix/html-profile/releases/download/666.void.scream/bg.mp4");
+    requiredFiles.push("https://github.com/Diramix/html-profile/releases/download/666.void.scream/bg.webp");
 }
 
 let loaded = 0;
