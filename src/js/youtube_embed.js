@@ -2,10 +2,12 @@ const youtubeEmbedObserver = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
             if (!(node instanceof HTMLElement)) return;
+            if (node.closest('.toast-container')) return;
 
             const links = node.matches('a[href*="youtube.com/watch"], a[href*="youtu.be"]')
                 ? [node]
-                : Array.from(node.querySelectorAll('a[href*="youtube.com/watch"], a[href*="youtu.be"]'));
+                : Array.from(node.querySelectorAll('a[href*="youtube.com/watch"], a[href*="youtu.be"]'))
+                    .filter(link => !link.closest('.toast-container'));
 
             links.forEach(link => {
                 if (link.dataset.embedProcessed) return;
@@ -26,7 +28,6 @@ const youtubeEmbedObserver = new MutationObserver(mutations => {
                     iframe.className = "youtube_embed";
                     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
                     iframe.allowFullscreen = true;
-
                     link.parentNode.insertAdjacentElement('afterend', iframe);
                 }
             });

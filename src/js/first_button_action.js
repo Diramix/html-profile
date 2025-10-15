@@ -1,6 +1,6 @@
 function handleFirstButtonClick() {
     // Show Toast
-    showToast("Background", "@sxshely", "src/assets/toast_image.png", "https://x.com/sxshely/status/1930316368546824480");
+    showToast("Background", "@diram1x", "src/assets/toast_image.png", "https://www.youtube.com/watch?v=yg0aeURACic");
 
     // Starting bg video
     const bgVideo = document.getElementById('background-video');
