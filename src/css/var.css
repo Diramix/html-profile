@@ -42,9 +42,9 @@
     --background-profile-content: #1E2027;
     --font-color: #2B333D;
     --block-title-font: #48535D;
-    --wrapper-color: #fff8;
+    --wrapper-color: rgba(255, 255, 255, 0.7);
     --simple-block-background-color: #fff5;
-    --simple-block-background-color-mobile: #fff1;
+    --simple-block-background-color-mobile: #fff8;
     --dev-description-text-color: #5F606A;
     --upm-background-color: #FFFFFF;
     --upm-button-color-hovered: #0001;
