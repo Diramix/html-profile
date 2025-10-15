@@ -68,7 +68,7 @@
         backdrop-filter: blur(var(--main-blur));
     }
 
-    .background_wrapper {
+    .profile_wrapper {
         background: #0009;
         padding: 15px !important;
         border-radius: 0;
