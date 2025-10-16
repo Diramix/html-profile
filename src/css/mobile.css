@@ -40,6 +40,92 @@
         box-sizing: inherit;
     }
 
+    .member {
+        display: none;
+    }
+
+    .you_bar {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: 65px;
+        z-index: 9999;
+        border-radius: 1000px;
+        background-color: var(--you-bar-color);
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        box-shadow: 0 0 20px #0005;
+    }
+
+    .you_nameplated {
+        margin-bottom: 65px;
+        pointer-events: none;
+    }
+
+    .you_nameplated .nameplate {
+        object-fit: contain;
+        display: block;
+        border-radius: 1000px;
+        background: linear-gradient(90deg, transparent 0%, rgba(115, 11, 200, 0.08) 20%, rgba(115, 11, 200, 0.08) 50%, rgba(115, 11, 200, 0.2) 100%);
+    }
+
+    .you_bar .toggle-theme-btn {
+        position: absolute;
+        right: 15px;
+        border-style: solid;
+        border-width: 0;
+        background-color: #0009;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .fav_user_container_mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fav_user_mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 7px;
+        height: 42px !important;
+        text-decoration: none;
+    }
+
+    .fav_user_avatar_mobile {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .fav_user_nickname_mobile {
+        color: var(--font-color);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+    .badge {
+        margin: 0;
+        width: 17px;
+        height: 17px;
+    }
+
+    .avatar_frame {
+        left: 10px;
+        top: 9px;
+        width: 50px;
+        height: 50px;
+    }
+
     .simple_block {
         border-radius: 15px;
         background-color: var(--simple-block-background-color-mobile);
@@ -76,6 +162,7 @@
 
     .dev_change {
         flex-direction: column;
+        margin-bottom: 70px;
     }
 
     .profile_title,
@@ -211,7 +298,7 @@
     left: 10px;
 }
 
-#mobileLinks .separator {
+.separator {
     height: 1px;
     background-color: var(--separator-color);
     width: 100%;

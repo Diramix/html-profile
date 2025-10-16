@@ -320,7 +320,7 @@ loadYouTubeAPI(setupPlayers);
 // Theme control
 const video = document.getElementById('background-video');
 const muteBtn = document.getElementById('mute-btn');
-const themeBtn = document.getElementById('toggle-theme-btn');
+const themeButtons = document.querySelectorAll('.toggle-theme-btn');
 const body = document.body;
 
 // Mute Button
@@ -342,8 +342,11 @@ muteBtn.addEventListener('click', () => {
 function applyTheme(theme) {
     body.classList.remove('light-theme', 'dark-theme');
     body.classList.add(theme);
-    themeBtn.textContent = theme === 'dark-theme' ? '🌙' : '☀️';
-    themeBtn.setAttribute('aria-pressed', theme === 'dark-theme');
+    const isDark = theme === 'dark-theme';
+    themeButtons.forEach(btn => {
+        btn.textContent = isDark ? '🌙' : '☀️';
+        btn.setAttribute('aria-pressed', isDark);
+    });
 }
 
 const savedTheme = localStorage.getItem('theme');
@@ -356,23 +359,23 @@ if (savedTheme) {
     applyTheme(defaultTheme);
 }
 
-themeBtn.addEventListener('click', () => {
+function toggleTheme() {
     const newTheme = body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
     localStorage.setItem('theme', newTheme);
     applyTheme(newTheme);
-});
+}
 
-// themeBtnObserver
-const themeBtnObserver = new MutationObserver(() => {
+themeButtons.forEach(btn => btn.addEventListener('click', toggleTheme));
+
+const themeObserver = new MutationObserver(() => {
     const isDark = body.classList.contains('dark-theme');
-    themeBtn.textContent = isDark ? '🌙' : '☀️';
-    themeBtn.setAttribute('aria-pressed', isDark);
+    themeButtons.forEach(btn => {
+        btn.textContent = isDark ? '🌙' : '☀️';
+        btn.setAttribute('aria-pressed', isDark);
+    });
 });
 
-themeBtnObserver.observe(body, {
-    attributes: true,
-    attributeFilter: ['class']
-});
+themeObserver.observe(body, { attributes: true, attributeFilter: ['class'] });
 
 // fav track parser
 async function fetchJson() {

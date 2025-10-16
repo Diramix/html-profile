@@ -32,6 +32,7 @@
     --favorite-track-chromium-background: #F1F3F4;
     --favorite-track-gecko-background: #1A1A1A;
     --toast-background-color-hovered: #30303090;
+    --you-bar-color: #121214;
 }
 
 .light-theme {
@@ -61,4 +62,5 @@
     --favorite-track-chromium-background: #F1F3F4;
     --favorite-track-gecko-background: #1C1C1C;
     --toast-background-color-hovered: #dbceff90;
+    --you-bar-color: #F3F3F4;
 }
