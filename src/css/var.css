@@ -33,6 +33,9 @@
     --favorite-track-gecko-background: #1A1A1A;
     --toast-background-color-hovered: #30303090;
     --you-bar-color: #121214;
+    --you-modal-bg-color: #000000;
+    --you-modal-block-color: #141318;
+    --swipe-bar-color: #141414;
 }
 
 .light-theme {
@@ -63,4 +66,7 @@
     --favorite-track-gecko-background: #1C1C1C;
     --toast-background-color-hovered: #dbceff90;
     --you-bar-color: #F3F3F4;
+    --you-modal-bg-color: #F2F3F5;
+    --you-modal-block-color: #FFFFFF;
+    --swipe-bar-color: #D8D9DB;
 }

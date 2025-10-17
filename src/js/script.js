@@ -377,6 +377,69 @@ const themeObserver = new MutationObserver(() => {
 
 themeObserver.observe(body, { attributes: true, attributeFilter: ['class'] });
 
+// You Modal
+document.addEventListener('DOMContentLoaded', () => {
+    const youBar = document.querySelector('.you_bar');
+    const modal = document.getElementById('you_modal');
+    const overlay = document.getElementById('you_overlay');
+    let startY = 0, currentY = 0, diffY = 0, isDragging = false;
+
+    const openModal = () => {
+        overlay.classList.add('active');
+        modal.style.transition = 'none';
+        modal.style.transform = 'translateY(100%)';
+        requestAnimationFrame(() => {
+            modal.classList.add('active');
+            modal.style.transition = 'transform 0.4s ease';
+            modal.style.transform = 'translateY(0)';
+        });
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        overlay.classList.remove('active');
+        modal.style.transition = 'transform 0.4s ease';
+        modal.style.transform = 'translateY(100%)';
+        setTimeout(() => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }, 400);
+    };
+
+    youBar.addEventListener('click', e => {
+        if (e.currentTarget === e.target) openModal();
+    });
+
+    overlay.addEventListener('click', closeModal);
+
+    modal.addEventListener('touchstart', e => {
+        startY = e.touches[0].clientY;
+        isDragging = true;
+    });
+
+    modal.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        currentY = e.touches[0].clientY;
+        diffY = currentY - startY;
+        if (diffY > 0) {
+            e.preventDefault();
+            modal.style.transition = 'none';
+            modal.style.transform = `translateY(${diffY}px)`;
+        }
+    }, { passive: false });
+
+    modal.addEventListener('touchend', () => {
+        isDragging = false;
+        modal.style.transition = 'transform 0.3s ease';
+        if (diffY > 50) {
+            closeModal();
+        } else {
+            modal.style.transform = 'translateY(0)';
+        }
+        diffY = 0;
+    });
+});
+
 // fav track parser
 async function fetchJson() {
     const jsonUrl = 'src/assets/fav-track.json';
