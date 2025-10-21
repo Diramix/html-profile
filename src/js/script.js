@@ -383,9 +383,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('you_modal');
     const overlay = document.getElementById('you_overlay');
     let startY = 0, currentY = 0, diffY = 0, isDragging = false;
+    let modalHeight = 0;
+    let closeTimeout = null;
+    let currentTranslate = 0;
+
+    const setOverlayOpacity = (y) => {
+        const ratio = Math.max(0, Math.min(1, 1 - y / modalHeight));
+        overlay.style.opacity = ratio;
+        if (ratio > 0 && !overlay.classList.contains('active')) overlay.classList.add('active');
+        if (ratio === 0 && overlay.classList.contains('active')) overlay.classList.remove('active');
+    };
 
     const openModal = () => {
+        if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+        }
         overlay.classList.add('active');
+        overlay.style.opacity = '1';
+        modalHeight = modal.offsetHeight;
+        currentTranslate = 0;
         modal.style.transition = 'none';
         modal.style.transform = 'translateY(100%)';
         requestAnimationFrame(() => {
@@ -397,12 +414,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const closeModal = () => {
-        overlay.classList.remove('active');
+        modalHeight = modal.offsetHeight;
         modal.style.transition = 'transform 0.4s ease';
         modal.style.transform = 'translateY(100%)';
-        setTimeout(() => {
+        overlay.style.transition = 'opacity 0.4s ease';
+        overlay.style.opacity = '0';
+        closeTimeout = setTimeout(() => {
             modal.classList.remove('active');
+            overlay.classList.remove('active');
+            overlay.style.transition = '';
             document.body.style.overflow = '';
+            closeTimeout = null;
+            currentTranslate = 0;
         }, 400);
     };
 
@@ -413,28 +436,38 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', closeModal);
 
     modal.addEventListener('touchstart', e => {
+        if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+        }
         startY = e.touches[0].clientY;
         isDragging = true;
+        modal.style.transition = 'none';
+        overlay.style.transition = 'none';
+        modalHeight = modal.offsetHeight;
+        overlay.classList.add('active');
     });
 
     modal.addEventListener('touchmove', e => {
         if (!isDragging) return;
         currentY = e.touches[0].clientY;
         diffY = currentY - startY;
-        if (diffY > 0) {
-            e.preventDefault();
-            modal.style.transition = 'none';
-            modal.style.transform = `translateY(${diffY}px)`;
-        }
+        let translateY = Math.max(0, currentTranslate + diffY);
+        modal.style.transform = `translateY(${translateY}px)`;
+        setOverlayOpacity(translateY);
     }, { passive: false });
 
     modal.addEventListener('touchend', () => {
         isDragging = false;
+        currentTranslate += diffY;
         modal.style.transition = 'transform 0.3s ease';
-        if (diffY > 50) {
+        overlay.style.transition = 'opacity 0.3s ease';
+        if (currentTranslate > 50) {
             closeModal();
         } else {
+            currentTranslate = 0;
             modal.style.transform = 'translateY(0)';
+            overlay.style.opacity = '1';
         }
         diffY = 0;
     });
