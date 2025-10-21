@@ -32,6 +32,7 @@
         font-family: 'Noto Sans', sans-serif;
         background-color: var(--main-background);
         box-sizing: border-box;
+        overflow: visible;
     }
 
     *,
