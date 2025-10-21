@@ -127,7 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
             attributeFilter: ['class']
       });
 
-      window.addEventListener('resize', updateIndev);
+      window.addEventListener('resize', () => {
+            updateIndev();
+            keepPanelInBounds();
+      });
+
       window.addEventListener('scroll', updateIndev);
 
       buttons.forEach(({ id, onClick }) => {
@@ -153,6 +157,25 @@ document.addEventListener('mouseup', () => {
 
 document.addEventListener('mousemove', e => {
       if (!dragging) return;
-      panel.style.left = e.clientX - offsetX + 'px';
-      panel.style.top = e.clientY - offsetY + 'px';
+      movePanel(e.clientX - offsetX, e.clientY - offsetY);
 });
+
+function movePanel(x, y) {
+      const maxX = window.innerWidth - panel.offsetWidth;
+      const maxY = window.innerHeight - panel.offsetHeight;
+      panel.style.left = Math.min(Math.max(0, x), maxX) + 'px';
+      panel.style.top = Math.min(Math.max(0, y), maxY) + 'px';
+}
+
+function keepPanelInBounds() {
+      const rect = panel.getBoundingClientRect();
+      const maxX = window.innerWidth - panel.offsetWidth;
+      const maxY = window.innerHeight - panel.offsetHeight;
+      let newX = rect.left, newY = rect.top;
+      if (rect.right > window.innerWidth) newX = maxX;
+      if (rect.bottom > window.innerHeight) newY = maxY;
+      if (rect.left < 0) newX = 0;
+      if (rect.top < 0) newY = 0;
+      panel.style.left = newX + 'px';
+      panel.style.top = newY + 'px';
+}
