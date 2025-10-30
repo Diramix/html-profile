@@ -346,6 +346,10 @@ body {
     background-image: url('https://i.postimg.cc/d3b0tVKg/telegram.png');
 }
 
+.badge.website {
+    background-image: url('https://i.postimg.cc/PrVyMX0y/website.png');
+}
+
 .expand_button {
     height: 30px;
     border-style: solid;
