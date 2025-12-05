@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: "Modern";
+    src: url("../assets/profile/Modern.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
@@ -421,9 +428,12 @@ body {
     text-overflow: ellipsis;
     width: 150px;
     display: block;
-    font-weight: bold;
-    font-size: 15px;
-    color: var(--font-color);
+    font-size: 16px;
+    background: linear-gradient(90deg, #00ceff 10%, #0074ff 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Modern", sans-serif;
 }
 
 .nickname>a {
