@@ -464,8 +464,12 @@ body {
     line-height: 2.2;
     height: 398px;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: relative;
+}
+
+.profile_content:hover {
+    overflow-y: auto;
 }
 
 .profile_content button {
@@ -509,7 +513,6 @@ body {
 .fav_user_container::-webkit-scrollbar-thumb {
     background-color: var(--scroll-background-color);
     border-radius: 5px;
-
 }
 
 .profile_content::-webkit-scrollbar-thumb:hover,
