@@ -209,7 +209,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, rgba(1, 49, 194, 0.041) 0%, rgba(1, 49, 194, 0.4) 100%);
+    background: linear-gradient(90deg, #0131c21a 0%, #0131c266 100%);
     border-radius: 10px;
     pointer-events: none;
     z-index: 1;
