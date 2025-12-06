@@ -333,6 +333,16 @@ body {
     border-radius: 50%;
 }
 
+.snow_hat {
+    background-image: url("https://diram1x.ru/src/assets/snow_hat.png");
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-position: center;
+    margin-left: -21px;
+    margin-top: -5px;
+}
+
 .fav_user,
 .fav_user .fav_user_nickname {
     text-decoration: none !important;
