@@ -42,13 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
         snowInterval = null;
     }
 
-    // Запускаем снег только на ПК
+    // Запускаем снег на ПК
     if (isDesktop()) {
         startSnow();
     }
 
+    // Кнопка для переключения
+    const toggleBtn = document.getElementById('toggleSnowfall');
+    toggleBtn.addEventListener('click', () => {
+        if (snowInterval) {
+            stopSnow();
+        } else {
+            startSnow();
+        }
+    });
+
+    // Остановка/запуск при сворачивании вкладки
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) stopSnow();
         else startSnow();
     });
+
 });
