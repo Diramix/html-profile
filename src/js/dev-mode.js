@@ -85,6 +85,7 @@ function updateIndev() {
       let engine = 'Unknown';
 
       if (/windows/.test(userAgent)) device = 'Windows';
+      else if (/linux/.test(userAgent)) device = 'Linux';
       else if (/android/.test(userAgent)) device = 'Android';
       else if (/iphone|ipad|ipod/.test(userAgent)) device = 'iOS';
 
