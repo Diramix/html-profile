@@ -386,7 +386,7 @@ body {
 }
 
 .fav_user_container.active {
-    max-height: 100vh;
+    max-height: calc(100vh - 65vh);
 }
 
 .fav_user_container.active+.expand_button .arrow {
