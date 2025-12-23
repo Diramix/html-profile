@@ -20,6 +20,17 @@ body {
     overflow: hidden;
 }
 
+.custom_font {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: linear-gradient(90deg, #00ceff 10%, #0074ff 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Modern", sans-serif;
+}
+
 .hidden_control {
     opacity: 0;
     transition: opacity 1s ease;
@@ -433,17 +444,9 @@ body {
 }
 
 .nickname {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     width: 150px;
     display: block;
     font-size: 16px;
-    background: linear-gradient(90deg, #00ceff 10%, #0074ff 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: "Modern", sans-serif;
 }
 
 .nickname>a {
