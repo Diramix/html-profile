@@ -496,7 +496,3 @@ fetchJson().then(track => {
     container.querySelector('audio').load();
     container.querySelector('.track_cover_mobile').style.backgroundImage = `url(${track.cover})`;
 }).catch(err => console.error(err));
-
-// Signal Link
-const signalLink = document.getElementById('signalLink');
-signalLink.href = "signal/scan.html";
