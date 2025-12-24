@@ -423,6 +423,11 @@
     /* Spotify green */
 }
 
+#mobileLinks .mobile_link:nth-child(15) svg path {
+    fill: #3943FD;
+    /* Signal blue */
+}
+
 /* mobile block title */
 .mobile_block_title {
     text-align: left;
