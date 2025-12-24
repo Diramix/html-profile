@@ -38,6 +38,21 @@ body {
     align-items: center;
     gap: 10px;
     z-index: 2;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .code {
@@ -45,6 +60,7 @@ body {
     height: auto;
     box-shadow: 0 0 15px black;
     border-radius: 30px 30px 10px 10px;
+    z-index: 3;
 }
 
 .scan_wrapper>button {
@@ -70,9 +86,9 @@ body {
 }
 
 .back {
-    z-index: 2;
     border-radius: 10px 10px 30px 30px;
     background-color: #D73257;
+    z-index: 3;
 }
 
 .back:hover {
