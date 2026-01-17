@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #11111b;
+    color: #a6adc8;
+}
+
+.halal {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #45475a;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #313244;
+    font-size: 1.05rem;
+}
+
+/* Заголовки */
+.halal h1,
+.halal h2 {
+    text-align: center;
+    color: #cdd6f4;
+}
+
+.halal h1 {
+    font-size: 1.8rem;
+}
+.halal h2 {
+    font-size: 1.4rem;
+}
+
+/* Разделы и подписи */
+.section-title {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #bac2de;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+}
+
+.hash,
+.closing {
+    font-family: "Courier New", monospace;
+    color: #555;
+}
+
+footer {
+    margin: 10px;
+    text-align: center;
+    color: #45475a;
+}
