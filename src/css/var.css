@@ -39,6 +39,7 @@
     --ds-button-background-color-mobile: #2d2d35;
     --ds-button-background-color: #fff1;
     --ds-button-background-color-hover: #fff2;
+    --ds-timestamp-color: #52A480;
 }
 
 .light-theme {
@@ -75,4 +76,5 @@
     --ds-button-background-color-mobile: #fff9;
     --ds-button-background-color: #fff9;
     --ds-button-background-color-hover: #fff;
+    --ds-timestamp-color: #006953;
 }

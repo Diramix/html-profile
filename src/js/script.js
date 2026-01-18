@@ -496,3 +496,31 @@ fetchJson().then(track => {
     container.querySelector('audio').load();
     container.querySelector('.track_cover_mobile').style.backgroundImage = `url(${track.cover})`;
 }).catch(err => console.error(err));
+
+// Timestamp
+function getMoscowTime() {
+    const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const moscowOffset = 3 * 60;
+    const moscowTime = new Date(utc + moscowOffset * 60000);
+    return moscowTime;
+}
+
+function formatTime(date) {
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+function updateTimestamps() {
+    const elements = document.querySelectorAll('.ds_activity_meta_timestamp');
+    const timeString = formatTime(getMoscowTime());
+    elements.forEach(el => {
+        el.textContent = timeString;
+    });
+}
+
+setInterval(updateTimestamps, 1000);
+
+updateTimestamps();

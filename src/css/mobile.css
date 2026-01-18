@@ -337,10 +337,89 @@
         border-radius: 50px;
     }
 
-    .profile_content {
+    .profile_main_blocks {
         justify-content: center;
         height: 100%;
         overflow-y: auto;
+    }
+
+    .ds_activity {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        overflow: hidden;
+        gap: 15px;
+    }
+
+    .ds_activity_type {
+        text-align: left;
+        position: sticky;
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+        color: var(--font-color);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 19px;
+    }
+
+    .ds_activity_content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .ds_activity_meta {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--font-color);
+        gap: 0;
+    }
+
+    .ds_activity_meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .ds_activity_largeImage {
+        width: 65px;
+        height: 65px;
+        background-image: url("https://avatars.githubusercontent.com/u/79011730?v=4");
+        background-size: cover;
+        background-position: center;
+        border-radius: 7px;
+    }
+
+    .ds_activity_meta_detail {
+        font-weight: 600;
+        font-size: 16px;
+        height: 25px;
+    }
+
+    .ds_activity_meta_state {
+        font-weight: 400;
+        font-size: 14px;
+        height: 20px;
+    }
+
+    .ds_activity_meta_timestamp {
+        font-family: "JetBrainsMono Nerd Font", monospace;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3333333333333333;
+        color: var(--ds-timestamp-color);
     }
 
     .ds_button {
