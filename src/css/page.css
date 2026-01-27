@@ -32,6 +32,10 @@ body {
     font-family: "Modern", sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 .hidden_control {
     opacity: 0;
     transition: opacity 1s ease;
@@ -144,13 +148,17 @@ body {
     align-items: center;
 }
 
-.profile_container {
+.user_gradient {
     background: linear-gradient(180deg, #a4bbe3 10%, #49538a 90%);
+}
+
+.profile_container {
     border-radius: 15px;
     box-shadow: 0 3px 10px #0008;
     padding: 5px;
     width: 750px;
     text-align: center;
+    z-index: 20;
 }
 
 .dev_hidden {

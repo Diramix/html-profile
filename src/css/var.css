@@ -16,7 +16,7 @@
     --simple-block-background-color: #fff1;
     --simple-block-background-color-mobile: #0006;
     --dev-description-text-color: #d5d1e7;
-    --upm-background-color: #000000;
+    --upm-background-color: #070709;
     --upm-button-color-hovered: #fff1;
     --expand-button-hover: #212121;
     --scroll-background-color: #615762;
@@ -39,7 +39,7 @@
     --ds-button-background-color-mobile: #2d2d35;
     --ds-button-background-color: #fff1;
     --ds-button-background-color-hover: #fff2;
-    --ds-timestamp-color: #52A480;
+    --ds-timestamp-color: #52a480;
 }
 
 .light-theme {

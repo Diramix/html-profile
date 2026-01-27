@@ -1,0 +1,87 @@
+.nextmusic_popup {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px 5px 0;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--upm-background-color);
+    color: var(--font-color);
+    left: -10px;
+    top: 30%;
+    height: 65px;
+    box-shadow: 0 5px 5px #0005;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.nextmusic_popup:hover {
+    transform: translateX(10px);
+    filter: brightness(1.2);
+}
+
+.nextmusic_popup_wrapper {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 10px 10px 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--wrapper-color);
+    align-items: center;
+    padding: 0 7px 0 15px;
+    gap: 5px;
+}
+
+.nextmusic_popup_wrapper img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px !important;
+}
+
+.nextmusic_title {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.nextmusic_modal_wrapper {
+    position: fixed;
+    inset: 0;
+    background: #0005;
+    backdrop-filter: blur(3px);
+    z-index: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0 solid;
+}
+
+.nextmusic_modal {
+    width: calc(100% - 80px);
+    max-width: 700px;
+    height: calc(100% - 80px);
+    max-height: 800px;
+    background-color: var(--upm-background-color);
+    border-radius: 15px;
+    padding: 5px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.modal_wrapper {
+    background-color: var(--wrapper-color);
+    border-radius: 13px;
+    padding: 15px;
+    height: 100%;
+    overflow: auto;
+}
+
+.nextmusic_modal img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
