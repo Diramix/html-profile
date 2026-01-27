@@ -60,8 +60,7 @@
 .nextmusic_modal {
     width: calc(100% - 80px);
     max-width: 700px;
-    height: calc(100% - 80px);
-    max-height: 800px;
+    height: auto;
     background-color: var(--upm-background-color);
     border-radius: 15px;
     padding: 5px;
