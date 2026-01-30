@@ -25,7 +25,7 @@
     transition:
         transform 0.3s ease,
         opacity 0.3s ease;
-    background-image: url("https://diram1x.ru/src/assets/snow_decor.png");
+    background-image: url("https://diram1x.ru/src/assets/toast/snow_decor.png");
     background-repeat: no-repeat;
     background-position: right center;
 }

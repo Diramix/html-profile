@@ -2,6 +2,11 @@
 @import url("https://cdn.jsdelivr.net/npm/jetbrains-mono@2.242/fonts/woff2/JetBrainsMono-Regular.woff2");
 
 @font-face {
+    font-family: "Twemoji";
+    src: url("TwemojiMozilla.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Modern";
     src: url("../assets/profile/Modern.woff2") format("woff2");
     font-weight: normal;
@@ -10,7 +15,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: "Noto Sans", sans-serif;
+    font-family: Twemoji, system-ui, sans-serif;
     user-select: none;
 }
 

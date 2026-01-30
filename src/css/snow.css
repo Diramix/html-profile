@@ -16,7 +16,6 @@
     opacity: 0.8;
     animation-timing-function: linear;
     animation-name: fall;
-
 }
 
 @keyframes fall {

@@ -1,28 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     function isDesktop() {
         const ua = navigator.userAgent.toLowerCase();
-        const isMobileUA = /android|iphone|ipad|ipod|mobile|opera mini|iemobile/.test(ua);
+        const isMobileUA =
+            /android|iphone|ipad|ipod|mobile|opera mini|iemobile/.test(ua);
         return !isMobileUA && window.innerWidth >= 900;
     }
 
     function createSnow() {
-        const snow = document.getElementById('snow');
+        const snow = document.getElementById("snow");
         if (!snow) return;
 
-        const flake = document.createElement('div');
-        flake.className = 'snowflake';
+        const flake = document.createElement("div");
+        flake.className = "snowflake";
 
         const size = Math.random() * 6 + 4;
         const left = Math.random() * 100;
         const duration = Math.random() * 5 + 5;
         const drift = (Math.random() - 0.5) * 200;
 
-        flake.style.left = left + '%';
-        flake.style.width = size + 'px';
-        flake.style.height = size + 'px';
-        flake.style.animationDuration = duration + 's';
-        flake.style.setProperty('--drift', drift + 'px');
+        flake.style.left = left + "%";
+        flake.style.width = size + "px";
+        flake.style.height = size + "px";
+        flake.style.animationDuration = duration + "s";
+        flake.style.setProperty("--drift", drift + "px");
 
         snow.appendChild(flake);
 
@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Кнопка для переключения
-    const toggleBtn = document.getElementById('toggleSnowfall');
-    toggleBtn.addEventListener('click', () => {
+    const toggleBtn = document.getElementById("toggleSnowfall");
+    toggleBtn.addEventListener("click", () => {
         if (snowInterval) {
             stopSnow();
         } else {
@@ -58,9 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Остановка/запуск при сворачивании вкладки
-    document.addEventListener('visibilitychange', () => {
+    document.addEventListener("visibilitychange", () => {
         if (document.hidden) stopSnow();
         else startSnow();
     });
-
 });

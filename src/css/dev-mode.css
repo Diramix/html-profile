@@ -86,7 +86,7 @@
 }
 
 .indev:hover {
-    background-color: #0D0D0D90;
+    background-color: #0d0d0d90;
     backdrop-filter: blur(var(--main-blur));
     transition: ease 0.2s;
 }

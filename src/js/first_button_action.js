@@ -6,7 +6,7 @@ function handleFirstButtonClick() {
     showToast(
         "Background",
         "@Lucariochu1",
-        "src/assets/toast_image.png",
+        "src/assets/toast/toast_image.png",
         "https://www.youtube.com/watch?v=7uzgx5cl8gg",
     );
 
