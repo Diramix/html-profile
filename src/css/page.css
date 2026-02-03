@@ -215,6 +215,7 @@ body {
 }
 
 .member {
+    background-color: var(--member-bg);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -224,7 +225,7 @@ body {
 }
 
 .member:hover {
-    background-color: #fff1;
+    background-color: var(--member-bg-hover);
     cursor: pointer;
 }
 
