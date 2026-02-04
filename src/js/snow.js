@@ -1,3 +1,5 @@
+let snowEnabled = true;
+
 document.addEventListener("DOMContentLoaded", () => {
     function isDesktop() {
         const ua = navigator.userAgent.toLowerCase();
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Запускаем снег на ПК
-    if (isDesktop()) {
+    if (isDesktop() && snowEnabled) {
         startSnow();
     }
 
@@ -52,14 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
         if (snowInterval) {
             stopSnow();
+            snowEnabled = false;
         } else {
             startSnow();
+            snowEnabled = true;
         }
     });
 
     // Остановка/запуск при сворачивании вкладки
-    document.addEventListener("visibilitychange", () => {
-        if (document.hidden) stopSnow();
-        else startSnow();
-    });
+    if (snowEnabled) {
+        document.addEventListener("visibilitychange", () => {
+            if (snowEnabled) {
+                if (document.hidden) stopSnow();
+                else startSnow();
+            }
+        });
+    }
 });
