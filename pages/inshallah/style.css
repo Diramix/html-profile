@@ -10,6 +10,29 @@ body {
     color: #a6adc8;
 }
 
+.text_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.important_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 200px;
+    position: sticky;
+    top: 10px;
+    text-align: center;
+}
+
+video {
+    border-radius: 20px;
+}
+
+/* Центр: halal */
 .halal {
     display: flex;
     flex-direction: column;
@@ -17,7 +40,6 @@ body {
     padding: 20px;
     border-radius: 20px;
     max-width: 800px;
-    margin: auto;
     background: #313244;
     font-size: 1.05rem;
 }
