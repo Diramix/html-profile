@@ -1,17 +1,28 @@
+/* --- Next Music Popup --- */
 .nextmusic_popup {
     position: fixed;
     display: flex;
     flex-direction: row;
-    padding: 5px 5px 5px 0;
-    border: none;
-    border-radius: 0 10px 10px 0;
-    background-color: var(--upm-background-color);
-    color: var(--font-color);
+    align-items: center;
+    padding: 5px 10px 5px 20px;
+    gap: 10px;
+
     left: -10px;
     top: 30%;
     height: 65px;
-    box-shadow: 0 5px 5px #0005;
+
+    border: 1px solid var(--border-color);
+    border-left-width: 0;
+    border-radius: 0 10px 10px 0;
+
+    background-color: var(--topbar-background-color);
+    color: var(--font-color);
     cursor: pointer;
+
+    box-shadow: 0 3px 10px var(--main-shadow-color);
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
+
     transition: transform 0.3s ease;
     transform: translateX(0);
     z-index: 1;
@@ -22,38 +33,31 @@
     filter: brightness(1.2);
 }
 
-.nextmusic_popup_wrapper {
-    display: flex;
-    flex-direction: row;
-    border-radius: 0 10px 10px 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--wrapper-color);
-    align-items: center;
-    padding: 0 7px 0 15px;
-    gap: 5px;
-}
-
-.nextmusic_popup_wrapper img {
+/* Popup image */
+.nextmusic_popup img {
     width: 45px;
     height: 45px;
     border-radius: 10px !important;
 }
 
+/* Popup title */
 .nextmusic_title {
     font-size: 17px;
     font-weight: 800;
 }
 
+/* --- Next Music Modal --- */
 .nextmusic_modal_wrapper {
     position: fixed;
     inset: 0;
-    background: #0005;
-    backdrop-filter: blur(3px);
-    z-index: 600;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background: #0005;
+    backdrop-filter: blur(3px);
+    z-index: 600;
     border: 0 solid;
 }
 
@@ -61,13 +65,17 @@
     width: calc(100% - 80px);
     max-width: 700px;
     height: auto;
+
     background-color: var(--upm-background-color);
-    border-radius: 15px;
-    padding: 5px;
     color: var(--font-color);
     text-align: center;
+
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 3px 10px var(--main-shadow-color);
 }
 
+/* Modal wrapper for content */
 .modal_wrapper {
     background-color: var(--wrapper-color);
     border-radius: 13px;
@@ -76,11 +84,12 @@
     overflow: auto;
 }
 
+/* Modal images */
 .nextmusic_modal img {
+    width: 100%;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
-    height: auto;
-    width: 100%;
     object-fit: contain;
     display: block;
 }

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "JetBrainsMonoNerd";
+    src: url("../assets/fonts/JetBrainsMonoNLNerdFont-Bold.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "Modern";
+    src: url("../assets/fonts/Modern.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}

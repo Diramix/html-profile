@@ -1,21 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/jetbrains-mono@2.242/fonts/woff2/JetBrainsMono-Regular.woff2");
-
-@font-face {
-    font-family: "Twemoji";
-    src: url("TwemojiMozilla.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Modern";
-    src: url("../assets/profile/Modern.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     box-sizing: border-box;
-    font-family: Twemoji, system-ui, sans-serif;
+    font-family: "Noto Sans", sans-serif;
     user-select: none;
 }
 
@@ -59,22 +44,24 @@ body {
     width: 100%;
     height: var(--topbar-height);
     background-color: var(--topbar-background-color);
-    backdrop-filter: blur(var(--main-blur));
-    border: solid #242426;
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
+    border: solid var(--border-color);
     border-width: 0 0 1px 0;
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 3px 10px var(--main-shadow-color);
 }
 
 @media (min-width: 1601px) {
     .topbar {
         width: 1600px;
         align-items: center;
-        border-radius: 10px;
+        border-radius: 100px;
         top: 10px;
-        border-width: 0;
+        border-width: 1px;
     }
 }
 
@@ -158,8 +145,8 @@ body {
 }
 
 .profile_container {
-    border-radius: 15px;
-    box-shadow: 0 3px 10px #0008;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px var(--main-shadow-color);
     padding: 5px;
     width: 750px;
     text-align: center;
@@ -172,7 +159,7 @@ body {
 
 .profile_wrapper {
     background-color: var(--wrapper-color);
-    border-radius: 13px;
+    border-radius: 15px;
     padding: 15px;
 }
 
@@ -594,7 +581,7 @@ body {
 }
 
 .ds_activity_meta_timestamp {
-    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-family: "JetBrainsMonoNerd", monospace;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333;
@@ -755,10 +742,15 @@ audio {
     font-size: 24px;
     cursor: pointer;
     color: black;
-    background: none;
-    border: none;
-    backdrop-filter: blur(var(--main-blur));
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
     background-color: var(--topbar-background-color);
     padding: 3px;
     border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px var(--main-shadow-color);
 }

@@ -13,10 +13,12 @@
     align-items: center;
     gap: 10px;
     background: var(--topbar-background-color);
-    backdrop-filter: blur(var(--main-blur));
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
     color: var(--font-color);
     padding: 12px 16px;
     border-radius: 8px;
+    border: 1px solid var(--border-color);
     min-width: 250px;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

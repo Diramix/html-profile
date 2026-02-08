@@ -10,16 +10,18 @@
     cursor: grab;
     top: 20vh;
     left: 10px;
-    background: var(--upm-background-color);
-    backdrop-filter: blur(var(--main-blur));
-    border-radius: 5px;
+    background: var(--topbar-background-color);
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
+    border-radius: 10px;
+    border: solid 1px var(--border-color);
     padding: 10px;
     z-index: 9999;
     font-family: sans-serif;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     flex-direction: row;
     gap: 10px;
+    box-shadow: 0 3px 10px var(--main-shadow-color);
 }
 
 .dev_block {
@@ -87,6 +89,7 @@
 
 .indev:hover {
     background-color: #0d0d0d90;
-    backdrop-filter: blur(var(--main-blur));
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
+        contrast(var(--main-contrast));
     transition: ease 0.2s;
 }
