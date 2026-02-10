@@ -43,7 +43,7 @@ body {
     position: relative;
     width: 100%;
     height: var(--topbar-height);
-    background-color: var(--topbar-background-color);
+    background-color: var(--overlay-background-color);
     backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
         contrast(var(--main-contrast));
     border: solid var(--border-color);
@@ -745,7 +745,7 @@ audio {
     border: 1px solid var(--border-color);
     backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
         contrast(var(--main-contrast));
-    background-color: var(--topbar-background-color);
+    background-color: var(--overlay-background-color);
     padding: 3px;
     border-radius: 10px;
     width: 40px;

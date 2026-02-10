@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--topbar-background-color);
+    background: var(--overlay-background-color);
     backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
         contrast(var(--main-contrast));
     color: var(--font-color);

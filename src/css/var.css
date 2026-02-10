@@ -8,7 +8,7 @@
 }
 
 .dark-theme {
-    --topbar-background-color: #0d0d0d90;
+    --overlay-background-color: #0d0d0d90;
     --topbar-button-color: #fff2;
     --topbar-button-color-hovered: #3b424d;
     --background-dark: #0d0d0d;
@@ -48,7 +48,7 @@
 }
 
 .light-theme {
-    --topbar-background-color: #e5def890;
+    --overlay-background-color: #fff9;
     --topbar-button-color: #0002;
     --topbar-button-color-hovered: #c9c1df;
     --background-dark: #0d0d0d;
