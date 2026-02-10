@@ -5,9 +5,9 @@ function handleFirstButtonClick() {
     // Show Toast
     showToast(
         "Background",
-        "@Lucariochu1",
+        "@BeautySnake",
         "src/assets/toast/toast_image.png",
-        "https://www.youtube.com/watch?v=7uzgx5cl8gg",
+        "https://www.youtube.com/watch?v=YDI3p1hIvdE",
     );
 
     // Starting bg video
