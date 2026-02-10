@@ -1,4 +1,4 @@
-let snowEnabled = true;
+let snowEnabled = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     function isDesktop() {
