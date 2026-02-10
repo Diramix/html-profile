@@ -23,7 +23,8 @@
     color: #fff;
     background: 0;
     border: none;
-    cursor: url("https://diram1x.ru/src/assets/cursor_yui.png"), pointer;
+    /*cursor: url("https://diram1x.ru/src/assets/cursor_yui.png"), pointer;*/
+    cursor: pointer;
 }
 
 .loading_wrapper {
@@ -41,7 +42,7 @@
     font-size: 24px;
     font-weight: bold;
     font-family: sans-serif;
-    cursor: url("https://diram1x.ru/src/assets/cursor_default.png"), auto;
+    /*cursor: url("https://diram1x.ru/src/assets/cursor_default.png"), auto;*/
 }
 
 .loading_thumbnail {
