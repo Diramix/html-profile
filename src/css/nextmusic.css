@@ -70,7 +70,7 @@
     color: var(--font-color);
     text-align: center;
 
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 5px;
     box-shadow: 0 3px 10px var(--main-shadow-color);
 }
@@ -78,7 +78,7 @@
 /* Modal wrapper for content */
 .modal_wrapper {
     background-color: var(--wrapper-color);
-    border-radius: 13px;
+    border-radius: 15px;
     padding: 15px;
     height: 100%;
     overflow: auto;
