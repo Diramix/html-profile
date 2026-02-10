@@ -10,18 +10,13 @@
     cursor: grab;
     top: 20vh;
     left: 10px;
-    background: var(--overlay-background-color);
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
-        contrast(var(--main-contrast));
-    border-radius: 10px;
-    border: solid 1px var(--border-color);
+    border-radius: 12px;
     padding: 10px;
     z-index: 9999;
     font-family: sans-serif;
     text-align: center;
     flex-direction: row;
     gap: 10px;
-    box-shadow: 0 3px 10px var(--main-shadow-color);
 }
 
 .dev_block {
@@ -49,7 +44,7 @@
     font-size: 14px;
     padding: 6px 8px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background 0.3s;
 }
 

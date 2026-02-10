@@ -9,7 +9,7 @@ function showToast(title, message, icon, url) {
         toast.className = "toast toast_link";
     } else {
         toast = document.createElement("div");
-        toast.className = "toast";
+        toast.className = "liquid_glass toast";
     }
 
     toast.innerHTML = `

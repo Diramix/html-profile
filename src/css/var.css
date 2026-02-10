@@ -1,14 +1,18 @@
 :root {
-    --main-blur: 30px;
-    --main-brightness: 1.5;
+    --lg-highlight: rgba(255, 255, 255, 0.4);
+    --lg-hover-glow: rgba(255, 255, 255, 0.4);
+
+    --main-blur: 10px;
+    --main-brightness: 1;
     --main-contrast: 1;
+
     --topbar-height: 48px;
     --border-color: #3a3a3a;
     --main-shadow-color: #0005;
 }
 
 .dark-theme {
-    --overlay-background-color: #0d0d0d90;
+    --overlay-background-color: #0d0d0d50;
     --topbar-button-color: #fff2;
     --topbar-button-color-hovered: #3b424d;
     --background-dark: #0d0d0d;

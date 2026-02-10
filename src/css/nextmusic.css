@@ -4,24 +4,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 5px 10px 5px 20px;
+    padding: 5px 10px 5px 25px;
     gap: 10px;
 
-    left: -10px;
+    left: -15px;
     top: 30%;
     height: 65px;
 
-    border: 1px solid var(--border-color);
-    border-left-width: 0;
-    border-radius: 0 10px 10px 0;
+    border: none;
+    border-radius: 0 12px 12px 0;
 
-    background-color: var(--overlay-background-color);
-    color: var(--font-color);
     cursor: pointer;
-
-    box-shadow: 0 3px 10px var(--main-shadow-color);
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
-        contrast(var(--main-contrast));
 
     transition: transform 0.3s ease;
     transform: translateX(0);
@@ -30,7 +23,6 @@
 
 .nextmusic_popup:hover {
     transform: translateX(10px);
-    filter: brightness(1.2);
 }
 
 /* Popup image */
@@ -44,6 +36,7 @@
 .nextmusic_title {
     font-size: 17px;
     font-weight: 800;
+    color: var(--font-color);
 }
 
 /* --- Next Music Modal --- */

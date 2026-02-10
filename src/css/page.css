@@ -43,25 +43,18 @@ body {
     position: relative;
     width: 100%;
     height: var(--topbar-height);
-    background-color: var(--overlay-background-color);
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
-        contrast(var(--main-contrast));
-    border: solid var(--border-color);
-    border-width: 0 0 1px 0;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 10px var(--main-shadow-color);
+    border-radius: 0;
+    z-index: 100;
 }
 
 @media (min-width: 1601px) {
     .topbar {
         width: 1600px;
-        align-items: center;
-        border-radius: 100px;
         top: 10px;
-        border-width: 1px;
+        border-radius: 100px;
     }
 }
 
@@ -747,16 +740,12 @@ audio {
 .user_actions_buttons_container > button {
     font-size: 24px;
     cursor: pointer;
-    color: black;
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
-        contrast(var(--main-contrast));
-    background-color: var(--overlay-background-color);
     padding: 3px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: none;
     width: 40px;
     height: 40px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 3px 10px var(--main-shadow-color);
+    z-index: 10;
 }

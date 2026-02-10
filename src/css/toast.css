@@ -12,13 +12,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--overlay-background-color);
-    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness))
-        contrast(var(--main-contrast));
     color: var(--font-color);
     padding: 12px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border-radius: 12px;
     min-width: 250px;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -27,7 +23,6 @@
     transition:
         transform 0.3s ease,
         opacity 0.3s ease;
-    background-image: url("https://diram1x.ru/src/assets/toast/snow_decor.png");
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -60,6 +55,8 @@
     cursor: pointer;
     text-decoration: none;
     outline: var(--font-color) solid 3px;
+    background-color: var(--overlay-background-color);
+    backdrop-filter: blur(var(--main-blur)) brightness(var(--main-brightness));
 }
 
 .toast_link:hover {

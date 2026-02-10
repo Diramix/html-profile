@@ -43,6 +43,7 @@
 	<link rel="icon" href="favicon.ico" type="image/icon">
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="src/css/liquid-glass.css">
 	<link rel="stylesheet" href="src/css/fonts.css">
 	<link rel="stylesheet" href="src/css/dev-mode.css">
 	<link rel="stylesheet" href="src/css/nextmusic.css">
@@ -64,10 +65,11 @@
 	<div class="loading_wrapper" id="loadingWrapper">
 		<div class="custom_font" id="loader">Loading: 0%</div>
 		<img src="src/assets/loading.gif" class="desktop loading_gif">
-		 <img src="src/assets/thumbnail.webp" class="desktop loading_thumbnail">
+		<img src="src/assets/thumbnail.webp" class="desktop loading_thumbnail">
 	</div>
 
 	<div class="fb_container" id="fb_container">
+	<img src="src/assets/thumbnail.webp" class="desktop loading_thumbnail">
 		<button class="first_button custom_font" onclick="handleFirstButtonClick()">
 			Click to enter...
 		</button>
@@ -101,7 +103,7 @@
     </button>
 
 		<div class="desktop topbar_wrapper">
-			<div class="topbar">
+			<div class="liquid_glass topbar">
 				<div class="links_profile_title">Links</div>
 				<div class="Experiments topbar_controls">
 					<div id="topbarLinks">
@@ -173,13 +175,13 @@
 		<div class="desktop" id="gradient-overlay"></div>
 
 		<div class="user_actions_buttons_container">
-			<button class="desktop toggle-theme-btn" aria-pressed="false">☀️</button>
-			<button class="desktop" id="mute-btn" aria-pressed="false">🔊</button>
+			<button class="desktop liquid_glass toggle-theme-btn" aria-pressed="false">☀️</button>
+			<button class="desktop liquid_glass" id="mute-btn" aria-pressed="false">🔊</button>
 		</div>
 
 		<div class="page_wrapper">
 			<div id="snow"></div>
-			<div class="dev-panel">
+			<div class="liquid_glass dev-panel">
 				<div class="dev_block">
 					<div class="dev_panel_title">Main</div>
 					<div class="dev_buttons_container">
@@ -200,7 +202,7 @@
 				</div>
 			</div>
 
-			<button class="desktop nextmusic_popup" onclick="document.querySelector('.nextmusic_modal_wrapper').style.display = 'flex';">
+			<button class="desktop liquid_glass nextmusic_popup" onclick="document.querySelector('.nextmusic_modal_wrapper').style.display = 'flex';">
 			        <img src="https://avatars.githubusercontent.com/u/186498563?s=200&v=4" class="nextmusic_logo"></img>
                     <div class="nextmusic_title">Next Music</div>
 			</button>
