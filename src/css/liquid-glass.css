@@ -29,7 +29,3 @@
 }
 
 /* Контент поверх стекла */
-.liquid_glass > * {
-    position: relative;
-    z-index: 2;
-}

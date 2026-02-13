@@ -218,7 +218,7 @@ body {
         transparent 0%,
         rgba(1, 49, 194, 0.08) 20%,
         rgba(1, 49, 194, 0.08) 50%,
-        rgba(1, 49, 194, 0.5) 100%
+        rgba(1, 49, 194, 0.2) 100%
     );
     border-radius: 10px;
     pointer-events: none;
