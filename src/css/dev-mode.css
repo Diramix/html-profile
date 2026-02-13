@@ -74,7 +74,7 @@
     bottom: 0;
     font-size: 15px;
     color: #fff;
-    z-index: 400;
+    z-index: 9999;
     text-align: right;
     padding: 10px;
     font-family: monospace;
