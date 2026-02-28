@@ -47,8 +47,7 @@
     --ds-button-background-color: #fff1;
     --ds-button-background-color-hover: #fff2;
     --ds-timestamp-color: #52a480;
-    --member-bg: #0003;
-    --member-bg-hover: #0003;
+    --member-bg-hover: #ffffff15;
 }
 
 .light-theme {
@@ -86,6 +85,5 @@
     --ds-button-background-color: #fff9;
     --ds-button-background-color-hover: #fff;
     --ds-timestamp-color: #006953;
-    --member-bg: #fff8;
     --member-bg-hover: #fff9;
 }

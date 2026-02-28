@@ -134,7 +134,7 @@ body {
 }
 
 .user_gradient {
-    background: linear-gradient(180deg, #5e6aff 10%, #5dffff 90%);
+    background: linear-gradient(180deg, #0d1140 10%, #001a57 90%);
 }
 
 .profile_container {
@@ -195,13 +195,14 @@ body {
 }
 
 .member {
-    background-color: var(--member-bg);
+    background-color: var(--simple-block-background-color);
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 10px;
     width: 100%;
+    transition: background-color 0.25s ease;
 }
 
 .member:hover {
